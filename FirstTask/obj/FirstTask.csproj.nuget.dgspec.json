@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\C#\\FirstTask\\FirstTask.csproj": {}
+    "E:\\C#\\Tasks\\FirstTask\\FirstTask.csproj": {}
   },
   "projects": {
-    "E:\\C#\\FirstTask\\FirstTask.csproj": {
+    "E:\\C#\\Tasks\\FirstTask\\FirstTask.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\C#\\FirstTask\\FirstTask.csproj",
+        "projectUniqueName": "E:\\C#\\Tasks\\FirstTask\\FirstTask.csproj",
         "projectName": "FirstTask",
-        "projectPath": "E:\\C#\\FirstTask\\FirstTask.csproj",
+        "projectPath": "E:\\C#\\Tasks\\FirstTask\\FirstTask.csproj",
         "packagesPath": "C:\\Users\\veram\\.nuget\\packages\\",
-        "outputPath": "E:\\C#\\FirstTask\\obj\\",
+        "outputPath": "E:\\C#\\Tasks\\FirstTask\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\veram\\AppData\\Roaming\\NuGet\\NuGet.Config",

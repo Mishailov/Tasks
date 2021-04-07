@@ -11,3 +11,16 @@ E:\C#\FirstTask\obj\Debug\netcoreapp3.1\FirstTask.csproj.CoreCompileInputs.cache
 E:\C#\FirstTask\obj\Debug\netcoreapp3.1\FirstTask.dll
 E:\C#\FirstTask\obj\Debug\netcoreapp3.1\FirstTask.pdb
 E:\C#\FirstTask\obj\Debug\netcoreapp3.1\FirstTask.genruntimeconfig.cache
+E:\C#\Tasks\FirstTask\bin\Debug\netcoreapp3.1\FirstTask.exe
+E:\C#\Tasks\FirstTask\bin\Debug\netcoreapp3.1\FirstTask.deps.json
+E:\C#\Tasks\FirstTask\bin\Debug\netcoreapp3.1\FirstTask.runtimeconfig.json
+E:\C#\Tasks\FirstTask\bin\Debug\netcoreapp3.1\FirstTask.runtimeconfig.dev.json
+E:\C#\Tasks\FirstTask\bin\Debug\netcoreapp3.1\FirstTask.dll
+E:\C#\Tasks\FirstTask\bin\Debug\netcoreapp3.1\FirstTask.pdb
+E:\C#\Tasks\FirstTask\obj\Debug\netcoreapp3.1\FirstTask.csprojAssemblyReference.cache
+E:\C#\Tasks\FirstTask\obj\Debug\netcoreapp3.1\FirstTask.AssemblyInfoInputs.cache
+E:\C#\Tasks\FirstTask\obj\Debug\netcoreapp3.1\FirstTask.AssemblyInfo.cs
+E:\C#\Tasks\FirstTask\obj\Debug\netcoreapp3.1\FirstTask.csproj.CoreCompileInputs.cache
+E:\C#\Tasks\FirstTask\obj\Debug\netcoreapp3.1\FirstTask.dll
+E:\C#\Tasks\FirstTask\obj\Debug\netcoreapp3.1\FirstTask.pdb
+E:\C#\Tasks\FirstTask\obj\Debug\netcoreapp3.1\FirstTask.genruntimeconfig.cache

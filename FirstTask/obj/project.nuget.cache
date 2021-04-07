@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ryJNt02VR/nASPLEwL7v81lK9gQjCfkpfo4qtTxv8zNQEnnHk/ee7ah+ozwNNueAwv1BmxUpH6RFDv95FyFitw==",
+  "dgSpecHash": "fw5joRJidmMCDB/25BwKTbpzhmGRtow8MNJ7iXtGnP5h2oNgLN7VaGo++weYduJvrNewx5nxupdBDrLpJrhTVg==",
   "success": true,
-  "projectFilePath": "E:\\C#\\FirstTask\\FirstTask.csproj",
+  "projectFilePath": "E:\\C#\\Tasks\\FirstTask\\FirstTask.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

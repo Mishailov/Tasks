@@ -14,12 +14,14 @@ namespace FirstTask
             {
                 case "1":
                     {
-                        ReadingCmd();
+                        Coordinate coordinate = new Coordinate(ReadingCmd());
+                        Console.WriteLine(coordinate.ToString());
                         break;
                     }
                 case "2":
                     {
-                        ReadingFile();
+                        Coordinate coordinate = new Coordinate(ReadingFile());
+                        Console.WriteLine(coordinate.ToString());
                         break;
                     }
                 default:
@@ -30,7 +32,7 @@ namespace FirstTask
             }
         }
 
-        static void ReadingCmd()
+        static List<string> ReadingCmd()
         {
             List<string> cmdContent = new List<string>();
             Console.WriteLine("Write coordinates");
@@ -38,26 +40,17 @@ namespace FirstTask
             while (true)
             {
                 string coordinate = Console.ReadLine();
-                if(string.IsNullOrEmpty(coordinate))
+                if (string.IsNullOrEmpty(coordinate))
                 {
                     break;
                 }
                 cmdContent.Add(coordinate);
             }
 
-            foreach (var item in cmdContent)
-            {
-                string[] allCoordinates = item.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
-                if(allCoordinates.Length == 2)
-                {
-                    float x = float.Parse(allCoordinates[0].Replace('.', ','));
-                    float y = float.Parse(allCoordinates[1].Replace('.', ','));
-                    Console.WriteLine("X: " + x + " " + "Y: " + y);
-                }
-            }
+            return cmdContent;
         }
 
-        static void ReadingFile()
+        static List<string> ReadingFile()
         {
             List<string> fileContent = new List<string>();
 
@@ -77,16 +70,7 @@ namespace FirstTask
                 Console.WriteLine("None file for reading!" + ex);
             }
 
-            foreach (var item in fileContent)
-            {
-                string[] coordinate = item.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
-                if (coordinate.Length == 2)
-                {
-                    float x = float.Parse(coordinate[0].Replace('.', ','));
-                    float y = float.Parse(coordinate[1].Replace('.', ','));
-                    Console.WriteLine("X: " + x + " " + "Y: " + y);
-                }
-            }
+            return fileContent;
         }
     }
 }
