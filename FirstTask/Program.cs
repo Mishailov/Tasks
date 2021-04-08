@@ -14,38 +14,32 @@ namespace FirstTask
             {
                 case "1":
                     {
-                        Coordinate coordinate = new Coordinate(ReadingCmd());
-                        if (coordinate.ParseResult())
-                        {
-                            Console.WriteLine(coordinate.ToString());
-                            break;
-                        }
-                        else
-                        {
-                            Console.WriteLine("Faild parsing");
-                            break;
-                        }
-
+                        CoordinatesAfterValidation(ReadingCmd());
+                        break;
                     }
                 case "2":
                     {
-                        Coordinate coordinate = new Coordinate(ReadingFile());
-                        if (coordinate.ParseResult())
-                        {
-                            Console.WriteLine(coordinate.ToString());
-                            break;
-                        }
-                        else
-                        {
-                            Console.WriteLine("Faild parsing");
-                            break;
-                        }
+                        CoordinatesAfterValidation(ReadingFile());
+                        break;
                     }
                 default:
                     {
                         Console.WriteLine("default");
                         break;
                     }
+            }
+        }
+
+        static void CoordinatesAfterValidation(List<string> coordinateList)
+        {
+            Coordinate coordinate = new Coordinate(coordinateList);
+            if (coordinate.ParseResult())
+            {
+                Console.WriteLine(coordinate.ToString());
+            }
+            else
+            {
+                Console.WriteLine("Faild parsing");
             }
         }
 
