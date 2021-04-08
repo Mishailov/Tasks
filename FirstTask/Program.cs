@@ -15,14 +15,31 @@ namespace FirstTask
                 case "1":
                     {
                         Coordinate coordinate = new Coordinate(ReadingCmd());
-                        Console.WriteLine(coordinate.ToString());
-                        break;
+                        if (coordinate.ParseResult())
+                        {
+                            Console.WriteLine(coordinate.ToString());
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Faild parsing");
+                            break;
+                        }
+
                     }
                 case "2":
                     {
                         Coordinate coordinate = new Coordinate(ReadingFile());
-                        Console.WriteLine(coordinate.ToString());
-                        break;
+                        if (coordinate.ParseResult())
+                        {
+                            Console.WriteLine(coordinate.ToString());
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Faild parsing");
+                            break;
+                        }
                     }
                 default:
                     {

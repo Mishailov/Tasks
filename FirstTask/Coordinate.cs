@@ -13,7 +13,27 @@ namespace FirstTask
             _listCoordinate = listCoordinate;
         }
 
-        private string GetParseToFloatOrEmptyString()
+        public bool ParseResult()
+        { 
+            foreach (var item in _listCoordinate)
+            {
+                string[] coordinate = item.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+                if (coordinate.Length != 2)
+                {
+                    return false;
+                }
+
+                if (!float.TryParse(coordinate[0].Replace('.', ','), out float x)
+                        || !float.TryParse(coordinate[1].Replace('.', ','), out float y))
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        private string Parse()
         {
             string coordinatesAfterValid = string.Empty;
             foreach (var item in _listCoordinate)
@@ -21,13 +41,9 @@ namespace FirstTask
                 string[] coordinate = item.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
                 if (coordinate.Length == 2)
                 {
-                    if(float.TryParse(coordinate[0].Replace('.', ','), out float x)
-                        && float.TryParse(coordinate[1].Replace('.', ','), out float y))
-                    {
-                        x = float.Parse(coordinate[0].Replace('.', ','));
-                        y = float.Parse(coordinate[1].Replace('.', ','));
-                        coordinatesAfterValid += $"X: {x} Y: {y}" + "\n";
-                    }
+                    float x = float.Parse(coordinate[0].Replace('.', ','));
+                    float y = float.Parse(coordinate[1].Replace('.', ','));
+                    coordinatesAfterValid += $"X: {x} Y: {y}" + "\n";
                 }
             }
 
@@ -36,7 +52,7 @@ namespace FirstTask
 
         public override string ToString()
         {
-            return GetParseToFloatOrEmptyString();
+            return Parse();
         }
     }
 }
