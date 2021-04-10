@@ -1,0 +1,13 @@
+E:\C#\Tasks\SecondTask\obj\Debug\netcoreapp3.1\SecondTask.csprojAssemblyReference.cache
+E:\C#\Tasks\SecondTask\obj\Debug\netcoreapp3.1\SecondTask.AssemblyInfoInputs.cache
+E:\C#\Tasks\SecondTask\obj\Debug\netcoreapp3.1\SecondTask.AssemblyInfo.cs
+E:\C#\Tasks\SecondTask\obj\Debug\netcoreapp3.1\SecondTask.csproj.CoreCompileInputs.cache
+E:\C#\Tasks\SecondTask\bin\Debug\netcoreapp3.1\SecondTask.exe
+E:\C#\Tasks\SecondTask\bin\Debug\netcoreapp3.1\SecondTask.deps.json
+E:\C#\Tasks\SecondTask\bin\Debug\netcoreapp3.1\SecondTask.runtimeconfig.json
+E:\C#\Tasks\SecondTask\bin\Debug\netcoreapp3.1\SecondTask.runtimeconfig.dev.json
+E:\C#\Tasks\SecondTask\bin\Debug\netcoreapp3.1\SecondTask.dll
+E:\C#\Tasks\SecondTask\bin\Debug\netcoreapp3.1\SecondTask.pdb
+E:\C#\Tasks\SecondTask\obj\Debug\netcoreapp3.1\SecondTask.dll
+E:\C#\Tasks\SecondTask\obj\Debug\netcoreapp3.1\SecondTask.pdb
+E:\C#\Tasks\SecondTask\obj\Debug\netcoreapp3.1\SecondTask.genruntimeconfig.cache
