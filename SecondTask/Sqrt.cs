@@ -8,19 +8,19 @@ namespace SecondTask
     {
         private double _inputNum;
         private int _rootNum;
-        private double _eps;
+        private double _lengthAfterDecimalPoint;
 
-        public Sqrt(double inputNum, int rootNum, double eps)
+        public Sqrt(double inputNum, int rootNum, double lengthAfterDecimalPoint)
         {
             _inputNum = inputNum;
             _rootNum = rootNum;
-            _eps = eps;
+            _lengthAfterDecimalPoint = lengthAfterDecimalPoint;
         }
 
         public double GetSqrtByNewton()
         {
-            if (_eps >= 1)
-                _eps = Double.Epsilon;
+            if (_lengthAfterDecimalPoint >= 1)
+                _lengthAfterDecimalPoint = Double.Epsilon;
 
             if (_rootNum < 2)
                 return _inputNum;
@@ -28,24 +28,23 @@ namespace SecondTask
             if (_inputNum < 0 && _rootNum % 2 == 0)
                 return Double.NaN;
 
-            double xk1 = _inputNum;
-            double xk = 0;
-            for (; ; )
+            double stepResult = _inputNum;
+            double desiredLengthResult = 0;
+            while(Math.Abs(desiredLengthResult - stepResult) >= _lengthAfterDecimalPoint)
             {
-                xk1 = (1.0 / _rootNum) * ((_rootNum - 1) * xk1 + _inputNum / (Math.Pow(xk1, _rootNum - 1)));
-                if (Math.Abs(xk - xk1) <= _eps) break;
-                xk = xk1;
+                desiredLengthResult = stepResult;
+                stepResult = (1.0 / _rootNum) * ((_rootNum - 1) * stepResult + _inputNum / (Math.Pow(stepResult, _rootNum - 1)));
             }
 
-            return (xk1 - xk1 % _eps);
+            return (stepResult - stepResult % _lengthAfterDecimalPoint);
         }
 
         public bool GetCompareWithPowValue()
         {
-            if (_eps >= 1)
-                _eps = Double.Epsilon;
+            if (_lengthAfterDecimalPoint >= 1)
+                _lengthAfterDecimalPoint = Double.Epsilon;
             double result = Math.Pow(_inputNum, 1 / (double)_rootNum)
-                - Math.Pow(_inputNum, 1 / (double)_rootNum) % _eps;
+                - Math.Pow(_inputNum, 1 / (double)_rootNum) % _lengthAfterDecimalPoint;
 
             return result == GetSqrtByNewton();
         }

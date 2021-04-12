@@ -6,9 +6,9 @@ namespace SecondTask
     {
         static void Main(string[] args)
         {
-            double input = 0.0;
-            int rootNumber = 0;
-            double epsil = 0.0;
+            double input;
+            int rootNumber;
+            double lengthAfterDecimalPointDouble;
 
             Console.WriteLine("Write number for root");
             string inputNum = Console.ReadLine();
@@ -16,30 +16,28 @@ namespace SecondTask
             Console.WriteLine("Write root");
             string rootNum = Console.ReadLine();
 
-            Console.WriteLine("write eps");
-            string eps = Console.ReadLine();
+            Console.WriteLine("write lengthAfterDecimalPoint");
+            string lengthAfterDecimalPointStr = Console.ReadLine();
 
-            if(TryParsing(inputNum) && TryParsing(eps))
+            if(Double.TryParse(inputNum, out input)
+                && Double.TryParse(lengthAfterDecimalPointStr, out lengthAfterDecimalPointDouble)
+                && int.TryParse(rootNum, out rootNumber))
             {
-                input = double.Parse(inputNum);
-                epsil = double.Parse(eps);
+                Sqrt sqrt = new Sqrt(input, rootNumber, lengthAfterDecimalPointDouble);
+                Console.WriteLine(sqrt.GetSqrtByNewton().ToString());
+                Console.WriteLine(sqrt.GetCompareWithPowValue().ToString());
             }
             else
-                Console.WriteLine("Uncorrect double value");
-
-            if (int.TryParse(rootNum, out int num))
-                rootNumber = int.Parse(rootNum);
-            else
-                Console.WriteLine("Uncorrect root");
-
-            Sqrt sqrt = new Sqrt(input, rootNumber, epsil);
-            Console.WriteLine(sqrt.GetSqrtByNewton().ToString());
-            Console.WriteLine(sqrt.GetCompareWithPowValue().ToString());
+                Console.WriteLine("Uncorrect values");
         }
 
-        static bool TryParsing(string input)
-        {
-            return (double.TryParse(input, out double num));
-        }
+        //при вызове метода, значение в out передает default value по этому не могу использовать DRY
+        //static double TryParsing(string input, double num)
+        //{
+        //    if (double.TryParse(input, out num))
+        //        return num;
+        //    else 
+        //        return Double.NaN;
+        //}
     }
 }
