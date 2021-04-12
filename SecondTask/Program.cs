@@ -6,9 +6,8 @@ namespace SecondTask
     {
         static void Main(string[] args)
         {
-            double input;
-            int rootNumber;
-            double lengthAfterDecimalPointDouble;
+            double input = 0.0;
+            double lengthAfterDecimalPointDouble = 0.0;
 
             Console.WriteLine("Write number for root");
             string inputNum = Console.ReadLine();
@@ -19,9 +18,9 @@ namespace SecondTask
             Console.WriteLine("write lengthAfterDecimalPoint");
             string lengthAfterDecimalPointStr = Console.ReadLine();
 
-            if(Double.TryParse(inputNum, out input)
-                && Double.TryParse(lengthAfterDecimalPointStr, out lengthAfterDecimalPointDouble)
-                && int.TryParse(rootNum, out rootNumber))
+            if (TryParsing(inputNum, ref input)
+                && TryParsing(lengthAfterDecimalPointStr, ref lengthAfterDecimalPointDouble)
+                && int.TryParse(rootNum, out int rootNumber))
             {
                 Sqrt sqrt = new Sqrt(input, rootNumber, lengthAfterDecimalPointDouble);
                 Console.WriteLine(sqrt.GetSqrtByNewton().ToString());
@@ -31,13 +30,9 @@ namespace SecondTask
                 Console.WriteLine("Uncorrect values");
         }
 
-        //при вызове метода, значение в out передает default value по этому не могу использовать DRY
-        //static double TryParsing(string input, double num)
-        //{
-        //    if (double.TryParse(input, out num))
-        //        return num;
-        //    else 
-        //        return Double.NaN;
-        //}
+        static bool TryParsing(string input, ref double num)
+        {
+            return double.TryParse(input, out num);
+        }
     }
 }
