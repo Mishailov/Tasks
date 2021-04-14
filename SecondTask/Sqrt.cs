@@ -14,7 +14,11 @@ namespace SecondTask
         {
             _inputNum = inputNum;
             _rootNum = rootNum;
-            _lengthAfterDecimalPoint = lengthAfterDecimalPoint;
+
+            if(_lengthAfterDecimalPoint >= 1)
+                _lengthAfterDecimalPoint = Double.Epsilon;
+            else
+                _lengthAfterDecimalPoint = lengthAfterDecimalPoint;
         }
 
         public double GetSqrtByNewton()
