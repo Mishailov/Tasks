@@ -23,9 +23,6 @@ namespace SecondTask
 
         public double GetSqrtByNewton()
         {
-            if (_lengthAfterDecimalPoint >= 1)
-                _lengthAfterDecimalPoint = Double.Epsilon;
-
             if (_rootNum < 2)
                 return _inputNum;
 
@@ -45,8 +42,6 @@ namespace SecondTask
 
         public bool GetCompareWithPowValue()
         {
-            if (_lengthAfterDecimalPoint >= 1)
-                _lengthAfterDecimalPoint = Double.Epsilon;
             double result = Math.Pow(_inputNum, 1 / (double)_rootNum)
                 - Math.Pow(_inputNum, 1 / (double)_rootNum) % _lengthAfterDecimalPoint;
 
