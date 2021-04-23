@@ -1,0 +1,13 @@
+E:\C#\Tasks\ThirdTask\bin\Debug\netcoreapp3.1\ThirdTask.exe
+E:\C#\Tasks\ThirdTask\bin\Debug\netcoreapp3.1\ThirdTask.deps.json
+E:\C#\Tasks\ThirdTask\bin\Debug\netcoreapp3.1\ThirdTask.runtimeconfig.json
+E:\C#\Tasks\ThirdTask\bin\Debug\netcoreapp3.1\ThirdTask.runtimeconfig.dev.json
+E:\C#\Tasks\ThirdTask\bin\Debug\netcoreapp3.1\ThirdTask.dll
+E:\C#\Tasks\ThirdTask\bin\Debug\netcoreapp3.1\ThirdTask.pdb
+E:\C#\Tasks\ThirdTask\obj\Debug\netcoreapp3.1\ThirdTask.csprojAssemblyReference.cache
+E:\C#\Tasks\ThirdTask\obj\Debug\netcoreapp3.1\ThirdTask.AssemblyInfoInputs.cache
+E:\C#\Tasks\ThirdTask\obj\Debug\netcoreapp3.1\ThirdTask.AssemblyInfo.cs
+E:\C#\Tasks\ThirdTask\obj\Debug\netcoreapp3.1\ThirdTask.csproj.CoreCompileInputs.cache
+E:\C#\Tasks\ThirdTask\obj\Debug\netcoreapp3.1\ThirdTask.dll
+E:\C#\Tasks\ThirdTask\obj\Debug\netcoreapp3.1\ThirdTask.pdb
+E:\C#\Tasks\ThirdTask\obj\Debug\netcoreapp3.1\ThirdTask.genruntimeconfig.cache
