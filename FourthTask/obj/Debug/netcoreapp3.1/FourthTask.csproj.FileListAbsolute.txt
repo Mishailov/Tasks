@@ -1,0 +1,13 @@
+E:\C#\Tasks\FourthTask\bin\Debug\netcoreapp3.1\FourthTask.exe
+E:\C#\Tasks\FourthTask\bin\Debug\netcoreapp3.1\FourthTask.deps.json
+E:\C#\Tasks\FourthTask\bin\Debug\netcoreapp3.1\FourthTask.runtimeconfig.json
+E:\C#\Tasks\FourthTask\bin\Debug\netcoreapp3.1\FourthTask.runtimeconfig.dev.json
+E:\C#\Tasks\FourthTask\bin\Debug\netcoreapp3.1\FourthTask.dll
+E:\C#\Tasks\FourthTask\bin\Debug\netcoreapp3.1\FourthTask.pdb
+E:\C#\Tasks\FourthTask\obj\Debug\netcoreapp3.1\FourthTask.csprojAssemblyReference.cache
+E:\C#\Tasks\FourthTask\obj\Debug\netcoreapp3.1\FourthTask.AssemblyInfoInputs.cache
+E:\C#\Tasks\FourthTask\obj\Debug\netcoreapp3.1\FourthTask.AssemblyInfo.cs
+E:\C#\Tasks\FourthTask\obj\Debug\netcoreapp3.1\FourthTask.csproj.CoreCompileInputs.cache
+E:\C#\Tasks\FourthTask\obj\Debug\netcoreapp3.1\FourthTask.dll
+E:\C#\Tasks\FourthTask\obj\Debug\netcoreapp3.1\FourthTask.pdb
+E:\C#\Tasks\FourthTask\obj\Debug\netcoreapp3.1\FourthTask.genruntimeconfig.cache
