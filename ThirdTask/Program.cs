@@ -6,6 +6,7 @@ namespace ThirdTask
     {
         static void Main(string[] args)
         {
+            Euclide euclide = new Euclide();
             bool loopStatus = true;
             while (loopStatus)
             {
@@ -13,7 +14,7 @@ namespace ThirdTask
                     "2: Eucklide algorithm with 3 param \n" +
                     "3: Eucklide algorithm with 4 param \n" +
                     "4: Eucklide algorithm with 5 param \n" +
-                    "5: Binary Eucklide algorithm /n" +
+                    "5: Binary Eucklide algorithm \n" +
                     "6: Exit");
                 Console.WriteLine("Write ur choice");
                 string choice = Console.ReadLine();
@@ -26,7 +27,7 @@ namespace ThirdTask
                                 && uint.TryParse(Console.ReadLine(), out uint val2))
                             {
                                 //two boxing. How to fix(optimize)? 
-                                Console.WriteLine($"{Euclide.EuclideanAlgorithmGCD(val1, val2, out long workingTime)} \n {workingTime} ");
+                                Console.WriteLine($"{euclide.EuclideanAlgorithmGCD(val1, val2, out long workingTime)}\n{workingTime}");
                             }
                             break;
                         }
@@ -37,7 +38,7 @@ namespace ThirdTask
                                 && uint.TryParse(Console.ReadLine(), out uint val2)
                                 && uint.TryParse(Console.ReadLine(), out uint val3))
                             {
-                                Console.WriteLine($"{Euclide.EuclideanAlgorithmGCD(val1, val2, val3)}");
+                                Console.WriteLine($"{euclide.EuclideanAlgorithmGCD(val1, val2, val3)}");
                             }
                             break;
                         }
@@ -49,7 +50,7 @@ namespace ThirdTask
                                 && uint.TryParse(Console.ReadLine(), out uint val3)
                                 && uint.TryParse(Console.ReadLine(), out uint val4))
                             {
-                                Console.WriteLine($"{Euclide.EuclideanAlgorithmGCD(val1, val2, val3, val4)}");
+                                Console.WriteLine($"{euclide.EuclideanAlgorithmGCD(val1, val2, val3, val4)}");
                             }
                             break;
                         }
@@ -62,7 +63,7 @@ namespace ThirdTask
                                 && uint.TryParse(Console.ReadLine(), out uint val4)
                                 && uint.TryParse(Console.ReadLine(), out uint val5))
                             { 
-                                Console.WriteLine($"{Euclide.EuclideanAlgorithmGCD(val1, val2, val3, val4, val5)}");
+                                Console.WriteLine($"{euclide.EuclideanAlgorithmGCD(val1, val2, val3, val4, val5)}");
                             }
                             break;
                         }
@@ -73,7 +74,7 @@ namespace ThirdTask
                                 && uint.TryParse(Console.ReadLine(), out uint val2))
                             {
                                 //two boxing. How to fix(optimize)? 
-                                Console.WriteLine($"{Euclide.BinaryEuclideanAlgorithmGCD(val1, val2, out long workingTime)} \n {workingTime} ");
+                                Console.WriteLine($"{euclide.BinaryEuclideanAlgorithmGCD(val1, val2, out long workingTime)}\n{workingTime}");
                             }
                             break;
                         }

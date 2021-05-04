@@ -5,14 +5,11 @@ using System.Text;
 
 namespace ThirdTask
 {
-    public static class Euclide
+    public class Euclide
     {
-        public static uint EuclideanAlgorithmGCD(uint val1, uint val2, out long workingTime)
+        private uint EuclideanAlgorithmGCD(uint val1, uint val2)
         {
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
-
-            while((val1 != 0) && (val2 != 0))
+            while ((val1 != 0) && (val2 != 0))
             {
                 if (val1 > val2)
                     val1 -= val2;
@@ -21,29 +18,38 @@ namespace ThirdTask
             }
 
             uint result = Math.Max(val1, val2);
+
+            return result;
+        }
+
+        public uint EuclideanAlgorithmGCD(uint val1, uint val2, uint val3)
+        {
+            return EuclideanAlgorithmGCD(val1, EuclideanAlgorithmGCD(val2, val3));
+        }
+
+        public uint EuclideanAlgorithmGCD(uint val1, uint val2, uint val3, uint val4)
+        {
+            return EuclideanAlgorithmGCD(val1
+                , EuclideanAlgorithmGCD(val2, val3, val4));
+        }
+
+        public uint EuclideanAlgorithmGCD(uint val1, uint val2, uint val3, uint val4, uint val5)
+        {
+            return EuclideanAlgorithmGCD(val1
+                , EuclideanAlgorithmGCD(val2, val3, val4, val5));
+        }
+
+        public uint EuclideanAlgorithmGCD(uint val1, uint val2, out long workingTime)
+        {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+            uint result = EuclideanAlgorithmGCD(val1, val2);
             stopwatch.Stop();
             workingTime = stopwatch.ElapsedMilliseconds;
             return result;
         }
 
-        public static uint EuclideanAlgorithmGCD(uint val1, uint val2, uint val3)
-        {
-            return EuclideanAlgorithmGCD(val1, EuclideanAlgorithmGCD(val2, val3, out long _), out long workingTime);
-        }
-
-        public static uint EuclideanAlgorithmGCD(uint val1, uint val2, uint val3, uint val4)
-        {
-            return EuclideanAlgorithmGCD(val1
-                , EuclideanAlgorithmGCD(val2, val3, val4), out long workingTime);
-        }
-
-        public static uint EuclideanAlgorithmGCD(uint val1, uint val2, uint val3, uint val4, uint val5)
-        {
-            return EuclideanAlgorithmGCD(val1
-                , EuclideanAlgorithmGCD(val2, val3, val4, val5), out long workingTime);
-        }
-
-        private static uint BinaryEuclideanAlgorithmGCD(uint val1, uint val2)
+        private uint BinaryEuclideanAlgorithmGCD(uint val1, uint val2)
         {
             if (val1 == 0 || val2 == val1)
             {
@@ -75,7 +81,7 @@ namespace ThirdTask
             }
         }
 
-        public static uint BinaryEuclideanAlgorithmGCD(uint val1, uint val2, out long workingTime)
+        public uint BinaryEuclideanAlgorithmGCD(uint val1, uint val2, out long workingTime)
         {
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();

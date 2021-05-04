@@ -1,30 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace FourthTask
 {
     public class Triangle
     {
-        private double _firstSideOfTheTriangle { get; set; }
-        private double _secondSideOfTheTriangle { get; set; }
-        private double _thirdSideOfTheTriangle { get; set; }
+        private List<double> _sidesOfTheTriangle;
 
         public Triangle(double firstSideOfTheTriangle,
             double secondSideOfTheTriangle,
             double thirdSideOfTheTriangle)
         {
-            _firstSideOfTheTriangle = firstSideOfTheTriangle;
-            _secondSideOfTheTriangle = secondSideOfTheTriangle;
-            _thirdSideOfTheTriangle = thirdSideOfTheTriangle;
+            _sidesOfTheTriangle = new List<double>();
+            _sidesOfTheTriangle.Add(firstSideOfTheTriangle);
+            _sidesOfTheTriangle.Add(secondSideOfTheTriangle);
+            _sidesOfTheTriangle.Add(thirdSideOfTheTriangle);
         }
 
         public bool IsTriangle()
         {
-            double maxSideLength = Math.Max(_firstSideOfTheTriangle,
-                Math.Max(_secondSideOfTheTriangle, _thirdSideOfTheTriangle));
-            if(maxSideLength < ((_firstSideOfTheTriangle +
-                _secondSideOfTheTriangle + _thirdSideOfTheTriangle) - maxSideLength))
+            double maxSideLength = _sidesOfTheTriangle.Max();
+            if(maxSideLength < _sidesOfTheTriangle.Where(x => x != maxSideLength).Sum())
             {
                 return true;
             }
@@ -37,21 +35,20 @@ namespace FourthTask
             if (IsTriangle())
             {
                 double semiPerimetr = GetPerimetrOfATriangle() / 2;
-                return Math.Sqrt(semiPerimetr * (semiPerimetr - _firstSideOfTheTriangle) *
-                    (semiPerimetr - _secondSideOfTheTriangle) *
-                    (semiPerimetr - _thirdSideOfTheTriangle));
+
+                return Math.Sqrt(semiPerimetr * _sidesOfTheTriangle
+                    .Select(x => semiPerimetr - x)
+                    .Aggregate((av, e) => av * e));
             }
 
-            return 0.0f;
+            return 0.0;
         }
 
         public double GetPerimetrOfATriangle()
         {
             if (IsTriangle())
             {
-                return _firstSideOfTheTriangle +
-                    _secondSideOfTheTriangle +
-                    _thirdSideOfTheTriangle;
+                return _sidesOfTheTriangle.Sum();
             }
 
             return 0.0;

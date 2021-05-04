@@ -5,6 +5,7 @@ namespace ThirdTask.Test
     [TestClass]
     public class EucklideTests
     {
+        Euclide euclide = new Euclide();
         [TestMethod]
         public void EuclideanAlgorithmGCD_300181and223744_19returned()
         {
@@ -14,7 +15,7 @@ namespace ThirdTask.Test
             uint expected = 19;
 
             //act
-            uint actual = Euclide.EuclideanAlgorithmGCD(val1, val2, out long workingTime);
+            uint actual = euclide.EuclideanAlgorithmGCD(val1, val2, out long workingTime);
 
             //assert
             Assert.AreEqual(expected, actual);
@@ -30,7 +31,7 @@ namespace ThirdTask.Test
             uint expected = 19;
 
             //act
-            uint actual = Euclide.EuclideanAlgorithmGCD(val1, val2, val3);
+            uint actual = euclide.EuclideanAlgorithmGCD(val1, val2, val3);
 
             //assert
             Assert.AreEqual(expected, actual);
@@ -47,7 +48,7 @@ namespace ThirdTask.Test
             uint expected = 19;
 
             //act
-            uint actual = Euclide.EuclideanAlgorithmGCD(val1, val2, val3, val4);
+            uint actual = euclide.EuclideanAlgorithmGCD(val1, val2, val3, val4);
 
             //assert
             Assert.AreEqual(expected, actual);
@@ -65,7 +66,7 @@ namespace ThirdTask.Test
             uint expected = 19;
 
             //act
-            uint actual = Euclide.EuclideanAlgorithmGCD(val1, val2, val3, val4, val5);
+            uint actual = euclide.EuclideanAlgorithmGCD(val1, val2, val3, val4, val5);
 
             //assert
             Assert.AreEqual(expected, actual);
@@ -80,10 +81,24 @@ namespace ThirdTask.Test
             uint expected = 19;
 
             //act
-            uint actual = Euclide.BinaryEuclideanAlgorithmGCD(val1, val2, out long workingTime);
+            uint actual = euclide.BinaryEuclideanAlgorithmGCD(val1, val2, out long workingTime);
 
             //assert
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void EuclideanAlgorithmGCD_workingTimeNotequalZero()
+        {
+            //arrange
+            uint val1 = 300181;
+            uint val2 = 223744;
+
+            //act
+            euclide.EuclideanAlgorithmGCD(val1, val2, out long workingTime);
+
+            //assert
+            Assert.IsTrue(workingTime != 0);
         }
     }
 }
