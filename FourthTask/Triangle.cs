@@ -7,27 +7,36 @@ namespace FourthTask
 {
     public class Triangle
     {
-        private List<double> _sidesOfTheTriangle;
+        private List<double> _sides;
 
-        public Triangle(double firstSideOfTheTriangle,
-            double secondSideOfTheTriangle,
-            double thirdSideOfTheTriangle)
+        public Triangle(double firstSide,
+            double secondSide,
+            double thirdSide)
         {
-            _sidesOfTheTriangle = new List<double>();
-            _sidesOfTheTriangle.Add(firstSideOfTheTriangle);
-            _sidesOfTheTriangle.Add(secondSideOfTheTriangle);
-            _sidesOfTheTriangle.Add(thirdSideOfTheTriangle);
+            _sides = new List<double>();
+            _sides.Add(firstSide);
+            _sides.Add(secondSide);
+            _sides.Add(thirdSide);
         }
 
         public bool IsTriangle()
         {
-            double maxSideLength = _sidesOfTheTriangle.Max();
-            if(maxSideLength < _sidesOfTheTriangle.Where(x => x != maxSideLength).Sum())
+            double maxSideLength = _sides.Max();
+            var legs = _sides.Where(x => x != maxSideLength);
+            if (maxSideLength >= legs.Sum())
             {
-                return true;
+                return false;
             }
 
-            return false;
+            foreach (var side in legs)
+            {
+                if(side > maxSideLength + legs.Where(x => x != side).Sum())
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
 
         public double GetAreaOfATriangle()
@@ -36,7 +45,7 @@ namespace FourthTask
             {
                 double semiPerimetr = GetPerimetrOfATriangle() / 2;
 
-                return Math.Sqrt(semiPerimetr * _sidesOfTheTriangle
+                return Math.Sqrt(semiPerimetr * _sides
                     .Select(x => semiPerimetr - x)
                     .Aggregate((av, e) => av * e));
             }
@@ -48,7 +57,7 @@ namespace FourthTask
         {
             if (IsTriangle())
             {
-                return _sidesOfTheTriangle.Sum();
+                return _sides.Sum();
             }
 
             return 0.0;
