@@ -1,0 +1,13 @@
+E:\C#\Tasks\FifthTask\bin\Debug\netcoreapp3.1\FifthTask.exe
+E:\C#\Tasks\FifthTask\bin\Debug\netcoreapp3.1\FifthTask.deps.json
+E:\C#\Tasks\FifthTask\bin\Debug\netcoreapp3.1\FifthTask.runtimeconfig.json
+E:\C#\Tasks\FifthTask\bin\Debug\netcoreapp3.1\FifthTask.runtimeconfig.dev.json
+E:\C#\Tasks\FifthTask\bin\Debug\netcoreapp3.1\FifthTask.dll
+E:\C#\Tasks\FifthTask\bin\Debug\netcoreapp3.1\FifthTask.pdb
+E:\C#\Tasks\FifthTask\obj\Debug\netcoreapp3.1\FifthTask.csprojAssemblyReference.cache
+E:\C#\Tasks\FifthTask\obj\Debug\netcoreapp3.1\FifthTask.AssemblyInfoInputs.cache
+E:\C#\Tasks\FifthTask\obj\Debug\netcoreapp3.1\FifthTask.AssemblyInfo.cs
+E:\C#\Tasks\FifthTask\obj\Debug\netcoreapp3.1\FifthTask.csproj.CoreCompileInputs.cache
+E:\C#\Tasks\FifthTask\obj\Debug\netcoreapp3.1\FifthTask.dll
+E:\C#\Tasks\FifthTask\obj\Debug\netcoreapp3.1\FifthTask.pdb
+E:\C#\Tasks\FifthTask\obj\Debug\netcoreapp3.1\FifthTask.genruntimeconfig.cache
