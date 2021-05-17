@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FifthTask
 {
-    class Vector3D
+    public class Vector3D
     {
         private double _x;
         private double _y;
