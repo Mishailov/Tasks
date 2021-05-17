@@ -6,8 +6,8 @@ namespace FifthTask
     {
         static void Main(string[] args)
         {
-            Vector3D firstVector = VectorCoordinates();
-            Vector3D secondVector = VectorCoordinates();
+            var firstVector = VectorCoordinates();
+            var secondVector = VectorCoordinates();
 
             if(firstVector is null || secondVector is null)
             {
