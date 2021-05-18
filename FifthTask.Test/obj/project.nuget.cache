@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3Y9KhaNMlPimoTX62jqsoC/61f1xa7nSvdT/rERAuhS/Yx6f7jK1PJsOZPmDhKbr7+97CL7D+AbapQQrcjq7TQ==",
+  "dgSpecHash": "ptFsOBavjwfec5fbC7RKwofZroAMHuAo+y+KC73J0Ci3CshGjT4nC+9u6PlRco/gjJ7pOCXo/OjpQdmEeJiemA==",
   "success": true,
-  "projectFilePath": "E:\\C#\\Tasks\\Vector3DTests\\FifthTask.Tests.csproj",
+  "projectFilePath": "E:\\C#\\Tasks\\FifthTask.Test\\FifthTask.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\veram\\.nuget\\packages\\coverlet.collector\\1.3.0\\coverlet.collector.1.3.0.nupkg.sha512",
     "C:\\Users\\veram\\.nuget\\packages\\microsoft.codecoverage\\16.7.1\\microsoft.codecoverage.16.7.1.nupkg.sha512",

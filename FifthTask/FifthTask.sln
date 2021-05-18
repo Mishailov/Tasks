@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FifthTask", "FifthTask.csproj", "{98D45D8B-BC41-4FC6-BFF5-BCD68FD7293D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FifthTask", "FifthTask.csproj", "{98D45D8B-BC41-4FC6-BFF5-BCD68FD7293D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FifthTask.Tests", "..\Vector3DTests\FifthTask.Tests.csproj", "{83987993-D435-4853-B5CE-BE234C390889}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FifthTask.Test", "..\FifthTask.Test\FifthTask.Test.csproj", "{70E57DFD-E854-48C2-AEFA-1937AE9BC861}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{98D45D8B-BC41-4FC6-BFF5-BCD68FD7293D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98D45D8B-BC41-4FC6-BFF5-BCD68FD7293D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98D45D8B-BC41-4FC6-BFF5-BCD68FD7293D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{83987993-D435-4853-B5CE-BE234C390889}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{83987993-D435-4853-B5CE-BE234C390889}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{83987993-D435-4853-B5CE-BE234C390889}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{83987993-D435-4853-B5CE-BE234C390889}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70E57DFD-E854-48C2-AEFA-1937AE9BC861}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70E57DFD-E854-48C2-AEFA-1937AE9BC861}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70E57DFD-E854-48C2-AEFA-1937AE9BC861}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70E57DFD-E854-48C2-AEFA-1937AE9BC861}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

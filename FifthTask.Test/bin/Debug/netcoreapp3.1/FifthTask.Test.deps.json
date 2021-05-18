@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "FifthTask.Tests/1.0.0": {
+      "FifthTask.Test/1.0.0": {
         "dependencies": {
           "FifthTask": "1.0.0",
           "MSTest.TestAdapter": "2.1.1",
@@ -15,7 +15,7 @@
           "coverlet.collector": "1.3.0"
         },
         "runtime": {
-          "FifthTask.Tests.dll": {}
+          "FifthTask.Test.dll": {}
         }
       },
       "coverlet.collector/1.3.0": {},
@@ -1079,7 +1079,7 @@
     }
   },
   "libraries": {
-    "FifthTask.Tests/1.0.0": {
+    "FifthTask.Test/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

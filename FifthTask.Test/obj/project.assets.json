@@ -5738,11 +5738,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\C#\\Tasks\\Vector3DTests\\FifthTask.Tests.csproj",
-      "projectName": "FifthTask.Tests",
-      "projectPath": "E:\\C#\\Tasks\\Vector3DTests\\FifthTask.Tests.csproj",
+      "projectUniqueName": "E:\\C#\\Tasks\\FifthTask.Test\\FifthTask.Test.csproj",
+      "projectName": "FifthTask.Test",
+      "projectPath": "E:\\C#\\Tasks\\FifthTask.Test\\FifthTask.Test.csproj",
       "packagesPath": "C:\\Users\\veram\\.nuget\\packages\\",
-      "outputPath": "E:\\C#\\Tasks\\Vector3DTests\\obj\\",
+      "outputPath": "E:\\C#\\Tasks\\FifthTask.Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\veram\\AppData\\Roaming\\NuGet\\NuGet.Config",
