@@ -64,11 +64,11 @@ namespace FifthTask
             //but this logic has the right to life, i think)
             foreach (var item in vector1.coordinates)
             {
-                var p = vector2.coordinates.Where(x => vector2.coordinates.IndexOf(x) 
+                var list = vector2.coordinates.Where(x => vector2.coordinates.IndexOf(x) 
                     != vector1.coordinates.IndexOf(item)).Select(x => x * item).ToList();
-                foreach(var it in p)
+                foreach(var moreItems in list)
                 {
-                    mult.Add(it);
+                    mult.Add(moreItems);
                 }
             }
 
