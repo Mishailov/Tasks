@@ -61,12 +61,11 @@ namespace FifthTask
             List<double> mult = new List<double>();
 
             //foreach in foreach is not a good idea, i know that)
-            //but this logic has the right to life? i think)
+            //but this logic has the right to life, i think)
             foreach (var item in vector1.coordinates)
             {
                 var p = vector2.coordinates.Where(x => vector2.coordinates.IndexOf(x) 
-                    != vector1.coordinates.IndexOf(item)).ToList();
-                p = p.Select(x => x * item).ToList();
+                    != vector1.coordinates.IndexOf(item)).Select(x => x * item).ToList();
                 foreach(var it in p)
                 {
                     mult.Add(it);
