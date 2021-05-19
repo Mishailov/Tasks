@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 
 namespace FifthTask.Test
 {
@@ -13,25 +14,49 @@ namespace FifthTask.Test
             [TestMethod]
             public void Multiply_123and456_nimus36minus3returned()
             {
-                string expected = "X:-3, Y:6, Z:-3";
+                var expected = new Vector3D(-3, 6, -3);
 
-                Assert.AreEqual(expected, firstVector.Multiply(secondVector).ToString());
+                var actual = firstVector.Multiply(secondVector);
+
+                Assert.IsTrue(actual.Equals(expected));
             }
 
             [TestMethod]
             public void Subtract_123and456_333withminusreturned()
             {
-                string expected = "X:-3, Y:-3, Z:-3";
+                var expected = new Vector3D(-3, -3, -3);
 
-                Assert.AreEqual(expected, firstVector.Subtract(secondVector).ToString());
+                var actual = firstVector.Subtract(secondVector);
+
+                Assert.IsTrue(actual.Equals(expected));
             }
 
             [TestMethod]
             public void Add_123and456_579returned()
             {
-                string expected = "X:5, Y:7, Z:9";
+                var expected = new Vector3D(5, 7, 9);
 
-                Assert.AreEqual(expected, firstVector.Add(secondVector).ToString());
+                var actual = firstVector.Add(secondVector);
+
+                Assert.IsTrue(actual.Equals(expected));
+            }
+
+            [TestMethod]
+            public void ToString_123_X1Y2Z3returned()
+            {
+                var expected = "X:1, Y:2, Z:3";
+
+                Assert.AreEqual(expected, firstVector.ToString());
+            }
+
+            [TestMethod]
+            public void ScalarMultiplication_123and3_369returned()
+            {
+                var expected = new Vector3D(3, 6, 9);
+
+                var actual = firstVector.ScalarMultiplication(3.0);
+
+                Assert.IsTrue(actual.Equals(expected));
             }
         }
     }
