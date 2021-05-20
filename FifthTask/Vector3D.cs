@@ -91,10 +91,5 @@ namespace FifthTask
                 , (vector1.coordinates[0] * vector2.coordinates[1])
                 - (vector1.coordinates[1] * vector2.coordinates[0]));
         }
-
-        public override string ToString()
-        {
-            return string.Format("X:{0}, Y:{1}, Z:{2}", coordinates[0], coordinates[1], coordinates[2]);
-        }
     }
 }

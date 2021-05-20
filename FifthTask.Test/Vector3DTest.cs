@@ -9,7 +9,7 @@ namespace FifthTask.Test
         [TestClass]
         public class Vector3DTests
         {
-            EqualsTest test = new EqualsTest();
+            Vector3DComparer test = new Vector3DComparer();
             Vector3D firstVector = new Vector3D(1.0, 2.0, 3.0);
             Vector3D secondVector = new Vector3D(4.0, 5.0, 6.0);
             [TestMethod]
