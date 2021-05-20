@@ -9,6 +9,7 @@ namespace FifthTask.Test
         [TestClass]
         public class Vector3DTests
         {
+            EqualsTest test = new EqualsTest();
             Vector3D firstVector = new Vector3D(1.0, 2.0, 3.0);
             Vector3D secondVector = new Vector3D(4.0, 5.0, 6.0);
             [TestMethod]
@@ -18,7 +19,7 @@ namespace FifthTask.Test
 
                 var actual = firstVector.Multiply(secondVector);
 
-                Assert.IsTrue(actual.Equals(expected));
+                Assert.IsTrue(test.Equals(expected, actual));
             }
 
             [TestMethod]
@@ -28,7 +29,7 @@ namespace FifthTask.Test
 
                 var actual = firstVector.Subtract(secondVector);
 
-                Assert.IsTrue(actual.Equals(expected));
+                Assert.IsTrue(test.Equals(expected, actual));
             }
 
             [TestMethod]
@@ -38,7 +39,7 @@ namespace FifthTask.Test
 
                 var actual = firstVector.Add(secondVector);
 
-                Assert.IsTrue(actual.Equals(expected));
+                Assert.IsTrue(test.Equals(expected, actual));
             }
 
             [TestMethod]
@@ -54,9 +55,9 @@ namespace FifthTask.Test
             {
                 var expected = new Vector3D(3, 6, 9);
 
-                var actual = firstVector.ScalarMultiplication(3.0);
+                var actual = firstVector.ScalarMultiplicationOnPrimitiveValue(3.0);
 
-                Assert.IsTrue(actual.Equals(expected));
+                Assert.IsTrue(test.Equals(expected, actual));
             }
         }
     }
