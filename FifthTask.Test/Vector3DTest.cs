@@ -43,14 +43,6 @@ namespace FifthTask.Test
             }
 
             [TestMethod]
-            public void ToString_123_X1Y2Z3returned()
-            {
-                var expected = "X:1, Y:2, Z:3";
-
-                Assert.AreEqual(expected, firstVector.ToString());
-            }
-
-            [TestMethod]
             public void ScalarMultiplication_123and3_369returned()
             {
                 var expected = new Vector3D(3, 6, 9);

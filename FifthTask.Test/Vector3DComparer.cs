@@ -14,7 +14,7 @@ namespace FifthTask.Test
             if(x is null || y is null)
                 return false;
 
-            if (!x.coordinates.SequenceEqual(y.coordinates))
+            if (!x.Coordinates.SequenceEqual(y.Coordinates))
                 return false;
             
             return true;
