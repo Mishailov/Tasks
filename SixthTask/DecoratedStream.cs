@@ -6,9 +6,14 @@ namespace SixthTask
     class DecoratedStream : Stream
     {
         private Stream _stream;
-        public DecoratedStream(Stream stream)
+
+        private const int _password = 1234;
+        public DecoratedStream(Stream stream, int password)
         {
-            _stream = stream;
+            if (password == _password)
+                _stream = stream;
+            else
+                _stream = null;
         }
 
         public override bool CanRead => _stream.CanRead;
@@ -46,7 +51,13 @@ namespace SixthTask
             _stream.Write(buffer, offset, count);
         }
 
-        //Method for pass
+        public bool IsPasswordCorrect()
+        {
+            if (_stream is null)
+                return false;
+
+            return true;
+        }
 
         //Methos for part of the read
     }
