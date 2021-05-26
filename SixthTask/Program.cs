@@ -9,9 +9,9 @@ namespace SixthTask
     {
         static void Main()
         {
-            //Stream stream = new OverrideStream(???);
+            Stream stream = new OverrideStream(new MemoryStream());
 
-            //DecoratedStream decStream = new DecoratedStream(new OverrideStream(stream));
+            DecoratedStream decoratedStream = new DecoratedStream(stream);
 
             //decStream.MethodPass();
 
