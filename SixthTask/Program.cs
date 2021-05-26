@@ -9,7 +9,7 @@ namespace SixthTask
     {
         static void Main()
         {
-            //Stream stream = new Stream();
+            //Stream stream = new OverrideStream(???);
 
             //DecoratedStream decStream = new DecoratedStream(new OverrideStream(stream));
 

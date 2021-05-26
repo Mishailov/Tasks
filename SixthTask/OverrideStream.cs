@@ -7,12 +7,13 @@ namespace SixthTask
 {
     class OverrideStream : Stream
     {
-        private readonly Stream _inner;
+        private Stream _inner;
 
         public OverrideStream(Stream inner)
         {
             _inner = inner;
         }
+
         public override bool CanRead => _inner.CanRead;
 
         public override bool CanSeek => _inner.CanSeek;
