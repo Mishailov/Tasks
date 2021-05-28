@@ -9,7 +9,7 @@ namespace SixthTask
 
         private const int _password = 1234;
 
-        public int Password { get; set; }
+        public int Password { get; private set; }
         public DecoratedStream(Stream stream)
         {
                 _stream = stream;
