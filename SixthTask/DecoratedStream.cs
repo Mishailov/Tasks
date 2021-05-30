@@ -32,7 +32,30 @@ namespace SixthTask
 
         public override int Read(byte[] buffer, int offset, int count)
         {
-            return _stream.Read(buffer, offset, count);
+            int read = 0;
+            int temp = 0;
+            int tenPercent = 1;
+
+            if (buffer.Length % 10 == 0)
+            {
+                tenPercent = (buffer.Length * 10) / 100;
+            }
+
+            for (int i = 0; i < buffer.Length; i += tenPercent)
+            {
+                if (i > buffer.Length)
+                {
+                    return read;
+                }
+
+                var newBuffer = buffer[temp..i];
+                read = _stream.Read(newBuffer, offset, newBuffer.Length);
+                temp = i;
+                Console.WriteLine($"{10} Percent");
+            }
+
+            return read;
+            //return _stream.Read(buffer, offset, count);
         }
 
         public override long Seek(long offset, SeekOrigin origin)
@@ -59,9 +82,9 @@ namespace SixthTask
             return true;
         }
         
-        public double PercentageOfRead(int length, byte[] allByteContentsInFile)
+        public double PercentageOfRead(int length)
         {
-            return (length * 100.0) / allByteContentsInFile.Length; 
+            return (length * 100.0) / this.Length; 
         }
     }
 }

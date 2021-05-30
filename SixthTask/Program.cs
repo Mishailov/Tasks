@@ -89,7 +89,7 @@ namespace SixthTask
                                     break;
                                 }
 
-                                Console.WriteLine($"Percent of read: {decoratedStream.PercentageOfRead(length, array)}");
+                                Console.WriteLine($"Percent of read: {decoratedStream.PercentageOfRead(length)}");
 
                                 break;
                             }
