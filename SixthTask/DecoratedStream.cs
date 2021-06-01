@@ -5,6 +5,8 @@ namespace SixthTask
 {
     class DecoratedStream : Stream
     {
+        public delegate void DecStreamHandler(string message);
+        public event DecStreamHandler TenPercent;
         private Stream _stream;
 
         private const int _password = 1234;
@@ -33,29 +35,39 @@ namespace SixthTask
         public override int Read(byte[] buffer, int offset, int count)
         {
             int read = 0;
-            int temp = 0;
+            int newOffset = 0;
             int tenPercent = 1;
+            double counterTenTimes = 0;
 
-            if (buffer.Length % 10 == 0)
+            if (buffer.Length > 10)
             {
-                tenPercent = (buffer.Length * 10) / 100;
+                tenPercent = buffer.Length / 10;
+                double tenPercentDouble = buffer.Length / 10.0;
+                counterTenTimes = (tenPercentDouble - tenPercent) * 10;
+                tenPercent += 1;
             }
 
+            int countInLoop = 0;
             for (int i = 0; i < buffer.Length; i += tenPercent)
             {
+                if(countInLoop == (int)counterTenTimes)
+                {
+                    tenPercent -= 1;
+                }
+
+                countInLoop++;
+
                 if (i > buffer.Length)
                 {
                     return read;
                 }
 
-                var newBuffer = buffer[temp..i];
-                read = _stream.Read(newBuffer, offset, newBuffer.Length);
-                temp = i;
-                Console.WriteLine($"{10} Percent");
+                read = _stream.Read(buffer, newOffset, tenPercent);
+                newOffset += tenPercent;
+                TenPercent?.Invoke($"{countInLoop * 10} percent");
             }
 
             return read;
-            //return _stream.Read(buffer, offset, count);
         }
 
         public override long Seek(long offset, SeekOrigin origin)

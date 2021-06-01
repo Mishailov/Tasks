@@ -50,6 +50,7 @@ namespace SixthTask
                                 }
 
                                 byte[] array = new byte[fileStream.Length];
+                                decoratedStream.TenPercent += Message;
                                 decoratedStream.Read(array, 0, array.Length);
                                 Console.WriteLine(System.Text.Encoding.Default.GetString(array));
 
@@ -102,6 +103,11 @@ namespace SixthTask
                 decoratedStream.Close();
                 stream.Close();
             }
+        }
+
+        private static void Message(string message)
+        {
+            Console.WriteLine(message);
         }
     }
 }
