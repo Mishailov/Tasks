@@ -34,37 +34,33 @@ namespace SixthTask
 
         public override int Read(byte[] buffer, int offset, int count)
         {
+            const int tenPercent = 10;
             int read = 0;
             int newOffset = 0;
-            int tenPercent = 1;
-            double counterTenTimes = 0;
+            int step = 1;
 
-            if (buffer.Length > 10)
+            if (buffer.Length > tenPercent)
             {
-                tenPercent = buffer.Length / 10;
-                double tenPercentDouble = buffer.Length / 10.0;
-                counterTenTimes = (tenPercentDouble - tenPercent) * 10;
-                tenPercent += 1;
+                step = buffer.Length / tenPercent;
             }
 
             int countInLoop = 0;
-            for (int i = 0; i < buffer.Length; i += tenPercent)
+            for (int i = 0; i < buffer.Length; i += step)
             {
-                if(countInLoop == (int)counterTenTimes)
-                {
-                    tenPercent -= 1;
-                }
-
-                countInLoop++;
-
                 if (i > buffer.Length)
                 {
                     return read;
                 }
 
-                read = _stream.Read(buffer, newOffset, tenPercent);
-                newOffset += tenPercent;
-                TenPercent?.Invoke($"{countInLoop * 10} percent");
+                if(countInLoop == 9)
+                {
+                    step = buffer.Length - (step * 9);
+                }
+
+                read = _stream.Read(buffer, newOffset, step);
+                newOffset += step;
+                TenPercent?.Invoke($"{countInLoop * 10 + 10} percent");
+                countInLoop++;
             }
 
             return read;
