@@ -50,7 +50,7 @@ namespace SixthTask
                                 }
 
                                 byte[] array = new byte[fileStream.Length];
-                                decoratedStream.TenPercent += Message;
+                                decoratedStream.EveryTenPercent += c_EveryTenPercent;
                                 decoratedStream.Read(array, 0, array.Length);
                                 Console.WriteLine(System.Text.Encoding.Default.GetString(array));
 
@@ -105,9 +105,10 @@ namespace SixthTask
             }
         }
 
-        private static void Message(string message)
+        private static void c_EveryTenPercent(object sender, EveryTenPercentEventArgs e)
         {
-            Console.WriteLine(message);
+            Console.WriteLine($"{e.TenPercent} percent");
+            //Environment.Exit(0);
         }
     }
 }

@@ -5,8 +5,8 @@ namespace SixthTask
 {
     class DecoratedStream : Stream
     {
-        public delegate void DecStreamHandler(string message);
-        public event DecStreamHandler TenPercent;
+        public event EventHandler<EveryTenPercentEventArgs> EveryTenPercent;
+
         private Stream _stream;
 
         private const int _password = 1234;
@@ -34,6 +34,8 @@ namespace SixthTask
 
         public override int Read(byte[] buffer, int offset, int count)
         {
+            EveryTenPercentEventArgs args = new EveryTenPercentEventArgs();
+
             const int tenPercent = 10;
             int read = 0;
             int newOffset = 0;
@@ -59,11 +61,18 @@ namespace SixthTask
 
                 read = _stream.Read(buffer, newOffset, step);
                 newOffset += step;
-                TenPercent?.Invoke($"{countInLoop * 10 + 10} percent");
+                
                 countInLoop++;
+                args.TenPercent = countInLoop * tenPercent;
+                OnEveryTenPercent(args);
             }
 
             return read;
+        }
+
+        protected virtual void OnEveryTenPercent(EveryTenPercentEventArgs e)
+        {
+            EveryTenPercent?.Invoke(this, e);
         }
 
         public override long Seek(long offset, SeekOrigin origin)
@@ -94,5 +103,10 @@ namespace SixthTask
         {
             return (length * 100.0) / this.Length; 
         }
+    }
+
+    public class EveryTenPercentEventArgs : EventArgs
+    {
+        public int TenPercent { get; set; }
     }
 }
