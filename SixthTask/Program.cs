@@ -107,8 +107,7 @@ namespace SixthTask
 
         private static void c_EveryTenPercent(object sender, EveryTenPercentEventArgs e)
         {
-            Console.WriteLine($"{e.TenPercent} percent");
-            //Environment.Exit(0);
+            Console.WriteLine($"{e.TenPercent}%");
         }
     }
 }
