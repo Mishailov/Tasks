@@ -36,14 +36,14 @@ namespace SixthTask
         {
             EveryTenPercentEventArgs args = new EveryTenPercentEventArgs();
 
-            const int tenPercentConst = 10;
+            const int percent = 10;
             int read = 0;
             int newOffset = 0;
             int step = 1;
 
-            if (buffer.Length > tenPercentConst)
+            if (buffer.Length > percent)
             {
-                step = buffer.Length / tenPercentConst;
+                step = buffer.Length / percent;
             }
 
             int countInLoop = 0;
@@ -54,7 +54,7 @@ namespace SixthTask
                     return read;
                 }
 
-                if(countInLoop == (tenPercentConst - 1))
+                if(countInLoop == (percent - 1))
                 {
                     step = buffer.Length - (step * countInLoop);
                 }
@@ -63,7 +63,7 @@ namespace SixthTask
                 newOffset += step;
                 
                 countInLoop++;
-                args.TenPercent = countInLoop * tenPercentConst;
+                args.TenPercent = countInLoop * percent;
                 OnEveryTenPercent(args);
             }
 
