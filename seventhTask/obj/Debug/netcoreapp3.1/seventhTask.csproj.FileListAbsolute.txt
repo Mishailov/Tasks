@@ -1,0 +1,13 @@
+E:\C#\Tasks\seventhTask\bin\Debug\netcoreapp3.1\seventhTask.exe
+E:\C#\Tasks\seventhTask\bin\Debug\netcoreapp3.1\seventhTask.deps.json
+E:\C#\Tasks\seventhTask\bin\Debug\netcoreapp3.1\seventhTask.runtimeconfig.json
+E:\C#\Tasks\seventhTask\bin\Debug\netcoreapp3.1\seventhTask.runtimeconfig.dev.json
+E:\C#\Tasks\seventhTask\bin\Debug\netcoreapp3.1\seventhTask.dll
+E:\C#\Tasks\seventhTask\bin\Debug\netcoreapp3.1\seventhTask.pdb
+E:\C#\Tasks\seventhTask\obj\Debug\netcoreapp3.1\seventhTask.csprojAssemblyReference.cache
+E:\C#\Tasks\seventhTask\obj\Debug\netcoreapp3.1\seventhTask.AssemblyInfoInputs.cache
+E:\C#\Tasks\seventhTask\obj\Debug\netcoreapp3.1\seventhTask.AssemblyInfo.cs
+E:\C#\Tasks\seventhTask\obj\Debug\netcoreapp3.1\seventhTask.csproj.CoreCompileInputs.cache
+E:\C#\Tasks\seventhTask\obj\Debug\netcoreapp3.1\seventhTask.dll
+E:\C#\Tasks\seventhTask\obj\Debug\netcoreapp3.1\seventhTask.pdb
+E:\C#\Tasks\seventhTask\obj\Debug\netcoreapp3.1\seventhTask.genruntimeconfig.cache
