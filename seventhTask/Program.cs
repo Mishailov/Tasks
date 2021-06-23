@@ -13,15 +13,15 @@ namespace seventhTask
             if (firstMatrix is null || secondMatrix is null)
                 return;
 
-            ViewMatrix(firstMatrix);
+            firstMatrix.ToString();
             Console.WriteLine("\n");
-            ViewMatrix(secondMatrix);
+            firstMatrix.ToString();
             Console.WriteLine("Myltiply: ");
-            ViewMatrix(firstMatrix * secondMatrix);
+            (firstMatrix * secondMatrix).ToString();
             Console.WriteLine("Add: ");
-            ViewMatrix(firstMatrix + secondMatrix);
+            (firstMatrix + secondMatrix).ToString();
             Console.WriteLine("Substract: ");
-            ViewMatrix(firstMatrix - secondMatrix);
+            (firstMatrix - secondMatrix).ToString();
         }
 
         static Matrix CreateAndFillMatrix()
@@ -50,17 +50,6 @@ namespace seventhTask
             }
 
             return new Matrix(data);
-        }
-
-        static void ViewMatrix(Matrix matrix)
-        {
-            matrix.ProcessActionOverData((i, j) =>
-            {
-                if(j == matrix.Data.GetLength(1) - 1)
-                    Console.Write(matrix.Data[i, j] + "\n");
-                else
-                    Console.Write(matrix.Data[i, j] + " ");
-            }); 
         }
     }
 }

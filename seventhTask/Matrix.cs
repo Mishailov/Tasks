@@ -8,13 +8,6 @@ namespace seventhTask
     {
         private float[,] _data;
 
-        public float[,] Data { 
-            get
-            {
-                return _data;
-            } 
-        }
-
         public Matrix(float[,] data)
         {
             _data = new float[data.GetLength(0), data.GetLength(1)];
@@ -74,36 +67,43 @@ namespace seventhTask
 
         public static Matrix operator +(Matrix firstMatrix, Matrix secondMatrix)
         {
+            return MinusPlusMethod("matrixes can not be added", 1, firstMatrix, secondMatrix);
+        }
+
+        public static Matrix operator -(Matrix firstMatrix, Matrix secondMatrix)
+        {
+            return MinusPlusMethod("matrixes can not be subtracted", -1, firstMatrix, secondMatrix);
+        }
+
+        private static Matrix MinusPlusMethod(string message, int sign, Matrix firstMatrix, Matrix secondMatrix)
+        {
             if (firstMatrix._data.GetLength(0) != secondMatrix._data.GetLength(0) || firstMatrix._data.GetLength(1) != secondMatrix._data.GetLength(1))
             {
-                throw new ArgumentException("matrixes can not be added");
+                throw new ArgumentException(message);
             }
 
             var resultMatrix = new Matrix(new float[firstMatrix._data.GetLength(0), secondMatrix._data.GetLength(1)]);
 
             resultMatrix.ProcessActionOverData((i, j) =>
             {
-                resultMatrix[i, j] = firstMatrix[i, j] + secondMatrix[i, j];
+                resultMatrix[i, j] = firstMatrix[i, j] + (sign * secondMatrix[i, j]);
             });
 
             return resultMatrix;
         }
 
-        public static Matrix operator -(Matrix firstMatrix, Matrix secondMatrix)
+        public override string ToString()
         {
-            if (firstMatrix._data.GetLength(0) != secondMatrix._data.GetLength(0) || firstMatrix._data.GetLength(1) != secondMatrix._data.GetLength(1))
+            string matrixToString = string.Empty;
+            this.ProcessActionOverData((i, j) =>
             {
-                throw new ArgumentException("matrixes can not be subtracted");
-            }
-
-            var resultMatrix = new Matrix(new float[firstMatrix._data.GetLength(0), secondMatrix._data.GetLength(1)]);
-
-            resultMatrix.ProcessActionOverData((i, j) =>
-            {
-                resultMatrix[i, j] = firstMatrix[i, j] - secondMatrix[i, j];
+                if (j == _data.GetLength(1) - 1)
+                    matrixToString += _data[i, j] + " \n";
+                else
+                    matrixToString += _data[i, j] + " ";
             });
 
-            return resultMatrix;
+            return matrixToString;
         }
     }
 }

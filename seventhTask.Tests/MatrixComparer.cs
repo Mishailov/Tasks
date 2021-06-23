@@ -17,7 +17,7 @@ namespace seventhTask.Tests
             int count = 0;
             x.ProcessActionOverData((i, j) =>
             {
-                if (x.Data[i, j] != y.Data[i, j])
+                if (x[i, j] != y[i, j])
                     count++;
             });
 
