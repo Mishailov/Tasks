@@ -12,13 +12,10 @@ namespace seventhTask
         {
             _data = new float[data.GetLength(0), data.GetLength(1)];
 
-            for (int i = 0; i < data.GetLength(0); i++)
+            ProcessActionOverData((i, j) => 
             {
-                for (int j = 0; j < data.GetLength(1); j++)
-                {
-                    _data[i, j] = data[i, j];
-                }
-            }
+                _data[i, j] = data[i, j];
+            });
         }
 
         public float this[int x, int y]

@@ -13,15 +13,15 @@ namespace seventhTask
             if (firstMatrix is null || secondMatrix is null)
                 return;
 
-            firstMatrix.ToString();
+            Console.WriteLine(firstMatrix.ToString());
             Console.WriteLine("\n");
-            firstMatrix.ToString();
+            Console.WriteLine(firstMatrix.ToString());
             Console.WriteLine("Myltiply: ");
-            (firstMatrix * secondMatrix).ToString();
+            Console.WriteLine((firstMatrix * secondMatrix).ToString());
             Console.WriteLine("Add: ");
-            (firstMatrix + secondMatrix).ToString();
+            Console.WriteLine((firstMatrix + secondMatrix).ToString());
             Console.WriteLine("Substract: ");
-            (firstMatrix - secondMatrix).ToString();
+            Console.WriteLine((firstMatrix - secondMatrix).ToString());
         }
 
         static Matrix CreateAndFillMatrix()
