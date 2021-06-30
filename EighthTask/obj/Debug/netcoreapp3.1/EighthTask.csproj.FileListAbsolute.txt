@@ -1,0 +1,13 @@
+E:\C#\Tasks\EighthTask\bin\Debug\netcoreapp3.1\EighthTask.exe
+E:\C#\Tasks\EighthTask\bin\Debug\netcoreapp3.1\EighthTask.deps.json
+E:\C#\Tasks\EighthTask\bin\Debug\netcoreapp3.1\EighthTask.runtimeconfig.json
+E:\C#\Tasks\EighthTask\bin\Debug\netcoreapp3.1\EighthTask.runtimeconfig.dev.json
+E:\C#\Tasks\EighthTask\bin\Debug\netcoreapp3.1\EighthTask.dll
+E:\C#\Tasks\EighthTask\bin\Debug\netcoreapp3.1\EighthTask.pdb
+E:\C#\Tasks\EighthTask\obj\Debug\netcoreapp3.1\EighthTask.csprojAssemblyReference.cache
+E:\C#\Tasks\EighthTask\obj\Debug\netcoreapp3.1\EighthTask.AssemblyInfoInputs.cache
+E:\C#\Tasks\EighthTask\obj\Debug\netcoreapp3.1\EighthTask.AssemblyInfo.cs
+E:\C#\Tasks\EighthTask\obj\Debug\netcoreapp3.1\EighthTask.csproj.CoreCompileInputs.cache
+E:\C#\Tasks\EighthTask\obj\Debug\netcoreapp3.1\EighthTask.dll
+E:\C#\Tasks\EighthTask\obj\Debug\netcoreapp3.1\EighthTask.pdb
+E:\C#\Tasks\EighthTask\obj\Debug\netcoreapp3.1\EighthTask.genruntimeconfig.cache
