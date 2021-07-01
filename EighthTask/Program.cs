@@ -7,20 +7,9 @@ namespace EighthTask
     {
         static void Main(string[] args)
         {
-            List<uint> list = new List<uint>(4);
-            list.Add(0);
-            list.Add(0);
-            list.Add(0);
-            list.Add(4);
-            Timer timer = new Timer(list);
-            timer.StoppedTimer += c_StoppedTimer;
+            Timer timer = new Timer(7);
+            timer.StoppedTimer += delegate { Console.WriteLine("Time is over"); };
             timer.TimerStarted();
-        }
-
-        static void c_StoppedTimer(object sender, EventArgs e)
-        {
-            Console.WriteLine("Time is over");
-            Environment.Exit(0);
         }
     }
 }
