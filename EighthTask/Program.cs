@@ -7,8 +7,15 @@ namespace EighthTask
     {
         static void Main(string[] args)
         {
-            Timer timer = new Timer(7);
-            timer.StoppedTimer += delegate { Console.WriteLine("Time is over"); };
+            Console.WriteLine("Enter seconds");
+            if(!uint.TryParse(Console.ReadLine(), out uint value))
+            {
+                Console.WriteLine("uncorrect value");
+                return;
+            }
+
+            Timer timer = new Timer(value);
+            timer.StoppedTimer += (message) => Console.WriteLine(message);
             timer.TimerStarted();
         }
     }
