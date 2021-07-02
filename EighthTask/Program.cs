@@ -15,7 +15,7 @@ namespace EighthTask
             }
 
             Timer timer = new Timer(value);
-            timer.StoppedTimer += (message) => Console.WriteLine(message);
+            timer.StoppedTimer += (o, e) => Console.WriteLine("time is over");
             timer.TimerStarted();
         }
     }

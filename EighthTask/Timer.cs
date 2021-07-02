@@ -9,8 +9,7 @@ namespace EighthTask
     {
         private uint _seconds;
 
-        public delegate void TimerHandler(string message);
-        public event TimerHandler StoppedTimer;
+        public event EventHandler StoppedTimer;
 
         public Timer(uint seconds)
         {
@@ -24,7 +23,7 @@ namespace EighthTask
                 Thread.Sleep(1000);
             }
 
-            StoppedTimer?.Invoke("Time is over");
+            StoppedTimer?.Invoke(this, EventArgs.Empty);
         }
     }
 }
