@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ninthTask
 {
-    class BinaryTree<T> where T : IComparable
+    class BinaryTree<T> where T : IComparable<T>
     {
         class BinaryTreeNode
         {
@@ -22,27 +22,11 @@ namespace ninthTask
         }
 
         BinaryTreeNode Root;
-        Comparison<T> CompareFunction;
-
-        public BinaryTree(Comparison<T> theCompareFunction)
-        {
-            Root = null;
-            CompareFunction = theCompareFunction;
-        }
-
-        public static int CompareFunction_Int(int left, int right)
-        {
-            return left - right;
-        }
-
-        public static int CompareFunction_String(string left, string right)
-        {
-            return left.CompareTo(right);
-        }
 
         public void Add(T Value)
         {
             BinaryTreeNode child = new BinaryTreeNode();
+
             child.Data = Value;
 
             if (Root == null)
@@ -54,7 +38,7 @@ namespace ninthTask
                 BinaryTreeNode Iterator = Root;
                 while (true)
                 {
-                    int Compare = CompareFunction(Value, Iterator.Data);
+                    int Compare = Value.CompareTo(Iterator.Data);
 
                     if (Compare <= 0)
                         if (Iterator.Left != null)
@@ -91,7 +75,7 @@ namespace ninthTask
             BinaryTreeNode Iterator = Root;
             while (Iterator != null)
             {
-                int Compare = CompareFunction(Value, Iterator.Data);
+                int Compare = Value.CompareTo(Iterator.Data);
 
                 if (Compare == 0) return true;
                 if (Compare < 0)
@@ -152,7 +136,7 @@ namespace ninthTask
                             current = current.Parent;
                             if (current != null)
                             {
-                                int Compare = theTree.CompareFunction(current.Data, CurrentValue);
+                                int Compare = current.Data.CompareTo(CurrentValue);
                                 if (Compare < 0) continue;
                             }
                             break;

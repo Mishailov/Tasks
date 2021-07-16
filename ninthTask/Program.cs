@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ninthTask
 {
@@ -6,24 +8,17 @@ namespace ninthTask
     {
         static void Main(string[] args)
         {
-            BinaryTree<int> Test = new BinaryTree<int>(BinaryTree<int>.CompareFunction_Int);
+            BinaryTree<int> allMarks = new BinaryTree<int>();
+            List<Student<int>> allInfoAboutStudents = new List<Student<int>>();
 
-            // Build the tree
-            Test.Add(5);
-            Test.Add(2);
-            Test.Add(1);
-            Test.Add(3);
-            Test.Add(3); // Duplicates are OK
-            Test.Add(4);
-            Test.Add(6);
-            Test.Add(10);
-            Test.Add(7);
-            Test.Add(8);
-            Test.Add(9);
+            allInfoAboutStudents.Add(new Student<int>("Artem", "c#", DateTime.Now, 7, allMarks));
+            allInfoAboutStudents.Add(new Student<int>("Denis", "c#", DateTime.Now, 5, allMarks));
+            allInfoAboutStudents.Add(new Student<int>("Kirill", "c#", DateTime.Now, 6, allMarks));
+            allInfoAboutStudents.Add(new Student<int>("Vasya", "c#", DateTime.Now, 4, allMarks));
 
-            foreach (int value in Test)
+            foreach (var value in allInfoAboutStudents.OrderBy(x => x.Mark)) 
             {
-                Console.WriteLine("Value: {0}", value);
+                Console.WriteLine($"Name: {value.Name}, Test: {value.TestName}, End time: {value.EndTime}, Mark: {value.Mark}");
             }
         }
     }
