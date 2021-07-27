@@ -68,7 +68,7 @@ namespace ninthTask
         public bool Find(T Value)
         {
             BinaryTreeNode Iterator = Root;
-            while (Iterator != null)
+            if (Iterator != null)
             {
                 int Compare = Value.CompareTo(Iterator.Data);
 
@@ -76,9 +76,9 @@ namespace ninthTask
                 if (Compare < 0)
                 {
                     Iterator = Iterator.Left;
-                    continue;
                 }
                 Iterator = Iterator.Right;
+                Find(Iterator.Data);
             }
             return false;
         }
