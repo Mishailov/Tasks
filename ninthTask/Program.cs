@@ -15,6 +15,18 @@ namespace ninthTask
             allInfoAboutStudents.Add(new Student<int>("Denis", "c#", DateTime.Now, 5, allMarks));
             allInfoAboutStudents.Add(new Student<int>("Kirill", "c#", DateTime.Now, 6, allMarks));
             allInfoAboutStudents.Add(new Student<int>("Vasya", "c#", DateTime.Now, 4, allMarks));
+            allInfoAboutStudents.Add(new Student<int>("Artem", "c#", DateTime.Now, 7, allMarks));
+            allInfoAboutStudents.Add(new Student<int>("Denis", "c#", DateTime.Now, 5, allMarks));
+            allInfoAboutStudents.Add(new Student<int>("Kirill", "c#", DateTime.Now, 6, allMarks));
+            allInfoAboutStudents.Add(new Student<int>("Vasya", "c#", DateTime.Now, 4, allMarks));
+            allInfoAboutStudents.Add(new Student<int>("Artem", "c#", DateTime.Now, 7, allMarks));
+            allInfoAboutStudents.Add(new Student<int>("Denis", "c#", DateTime.Now, 5, allMarks));
+            allInfoAboutStudents.Add(new Student<int>("Kirill", "c#", DateTime.Now, 6, allMarks));
+            allInfoAboutStudents.Add(new Student<int>("Vasya", "c#", DateTime.Now, 4, allMarks));
+            allInfoAboutStudents.Add(new Student<int>("Artem", "c#", DateTime.Now, 7, allMarks));
+            allInfoAboutStudents.Add(new Student<int>("Denis", "c#", DateTime.Now, 5, allMarks));
+            allInfoAboutStudents.Add(new Student<int>("Kirill", "c#", DateTime.Now, 6, allMarks));
+            allInfoAboutStudents.Add(new Student<int>("Vasya", "c#", DateTime.Now, 4, allMarks));
 
             foreach (var value in allInfoAboutStudents.OrderBy(x => x.Mark)) 
             {
