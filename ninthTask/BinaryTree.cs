@@ -78,7 +78,7 @@ namespace ninthTask
                     Iterator = Iterator.Left;
                 }
                 Iterator = Iterator.Right;
-                Find(Iterator.Data);
+                return Find(Iterator.Data);
             }
             return false;
         }
