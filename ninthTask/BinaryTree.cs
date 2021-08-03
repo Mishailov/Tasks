@@ -24,7 +24,7 @@ namespace ninthTask
         BinaryTreeNode Root;
 
         public void Add(T Value)
-        {
+        {   
             BinaryTreeNode child = new BinaryTreeNode();
 
             child.Data = Value;
@@ -35,50 +35,61 @@ namespace ninthTask
             }
             else
             {
-                BinaryTreeNode Iterator = Root;
-                int Compare = Value.CompareTo(Iterator.Data);
-
-                if (Compare <= 0)
-                    if (Iterator.Left != null)
-                    {
-                        Iterator = Iterator.Left;
-                    }
-                    else
-                    {
-                        Iterator.Left = child;
-                        child.Parent = Iterator;
-                        Add(child.Parent.Data);
-                    }
-
-                if (Compare > 0)
-                    if (Iterator.Right != null)
-                    {
-                        Iterator = Iterator.Right;
-                    }
-                    else
-                    {
-                        Iterator.Right = child;
-                        child.Parent = Iterator;
-                        Add(child.Parent.Data);
-                    }
+                BinaryTreeNode Interator = Root;
+                AddRecursive(Value, Interator, child);
             }
 
+        }
+
+        private void AddRecursive(T Value, BinaryTreeNode rootIterator, BinaryTreeNode child)
+        {
+            int Compare = Value.CompareTo(rootIterator.Data);
+
+            if (Compare <= 0)
+                if (rootIterator.Left != null)
+                {
+                    rootIterator = rootIterator.Left;
+                    AddRecursive(Value, rootIterator, child);
+                }
+                else
+                {
+                    rootIterator.Left = child;
+                    child.Parent = rootIterator;
+                }
+
+            if (Compare > 0)
+                if (rootIterator.Right != null)
+                {
+                    rootIterator = rootIterator.Right;
+                    AddRecursive(Value, rootIterator, child);
+                }
+                else
+                {
+                    rootIterator.Right = child;
+                    child.Parent = rootIterator;
+                }
         }
 
         public bool Find(T Value)
         {
             BinaryTreeNode Iterator = Root;
-            if (Iterator != null)
+            return FindRecursive(Value, Iterator);
+        }
+
+        private bool FindRecursive(T Value, BinaryTreeNode rootIterator)
+        {
+            if (rootIterator != null)
             {
-                int Compare = Value.CompareTo(Iterator.Data);
+                int Compare = Value.CompareTo(rootIterator.Data);
 
                 if (Compare == 0) return true;
                 if (Compare < 0)
                 {
-                    Iterator = Iterator.Left;
+                    rootIterator = rootIterator.Left;
+                    return FindRecursive(Value, rootIterator);
                 }
-                Iterator = Iterator.Right;
-                return Find(Iterator.Data);
+                rootIterator = rootIterator.Right;
+                return FindRecursive(Value, rootIterator);
             }
             return false;
         }

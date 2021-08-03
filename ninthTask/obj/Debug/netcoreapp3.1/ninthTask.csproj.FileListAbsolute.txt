@@ -11,3 +11,16 @@ E:\C#\Tasks\ninthTask\obj\Debug\netcoreapp3.1\ninthTask.csproj.CoreCompileInputs
 E:\C#\Tasks\ninthTask\obj\Debug\netcoreapp3.1\ninthTask.dll
 E:\C#\Tasks\ninthTask\obj\Debug\netcoreapp3.1\ninthTask.pdb
 E:\C#\Tasks\ninthTask\obj\Debug\netcoreapp3.1\ninthTask.genruntimeconfig.cache
+C:\ProjectForImpr\Tasks\ninthTask\bin\Debug\netcoreapp3.1\ninthTask.exe
+C:\ProjectForImpr\Tasks\ninthTask\bin\Debug\netcoreapp3.1\ninthTask.deps.json
+C:\ProjectForImpr\Tasks\ninthTask\bin\Debug\netcoreapp3.1\ninthTask.runtimeconfig.json
+C:\ProjectForImpr\Tasks\ninthTask\bin\Debug\netcoreapp3.1\ninthTask.runtimeconfig.dev.json
+C:\ProjectForImpr\Tasks\ninthTask\bin\Debug\netcoreapp3.1\ninthTask.dll
+C:\ProjectForImpr\Tasks\ninthTask\bin\Debug\netcoreapp3.1\ninthTask.pdb
+C:\ProjectForImpr\Tasks\ninthTask\obj\Debug\netcoreapp3.1\ninthTask.csproj.AssemblyReference.cache
+C:\ProjectForImpr\Tasks\ninthTask\obj\Debug\netcoreapp3.1\ninthTask.AssemblyInfoInputs.cache
+C:\ProjectForImpr\Tasks\ninthTask\obj\Debug\netcoreapp3.1\ninthTask.AssemblyInfo.cs
+C:\ProjectForImpr\Tasks\ninthTask\obj\Debug\netcoreapp3.1\ninthTask.csproj.CoreCompileInputs.cache
+C:\ProjectForImpr\Tasks\ninthTask\obj\Debug\netcoreapp3.1\ninthTask.dll
+C:\ProjectForImpr\Tasks\ninthTask\obj\Debug\netcoreapp3.1\ninthTask.pdb
+C:\ProjectForImpr\Tasks\ninthTask\obj\Debug\netcoreapp3.1\ninthTask.genruntimeconfig.cache
