@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ninthTask
 {
-    class BinaryTree<T> where T : IComparable<T>
+    public class BinaryTree<T> where T : IComparable<T>
     {
         class BinaryTreeNode
         {
@@ -42,7 +42,7 @@ namespace ninthTask
 
         }
 
-        private void AddRecursive(T Value, BinaryTreeNode rootIterator, BinaryTreeNode child)
+        private static void AddRecursive(T Value, BinaryTreeNode rootIterator, BinaryTreeNode child)
         {
             int Compare = Value.CompareTo(rootIterator.Data);
 
@@ -77,7 +77,7 @@ namespace ninthTask
             return FindRecursive(Value, Iterator);
         }
 
-        private bool FindRecursive(T Value, BinaryTreeNode rootIterator)
+        private static bool FindRecursive(T Value, BinaryTreeNode rootIterator)
         {
             if (rootIterator != null)
             {
@@ -100,7 +100,7 @@ namespace ninthTask
             Root = RemoveRecursive(Root, Value);
         }
 
-        private BinaryTreeNode RemoveRecursive(BinaryTreeNode rootIterator, T Value)
+        private static BinaryTreeNode RemoveRecursive(BinaryTreeNode rootIterator, T Value)
         {
             if (rootIterator is null)
                 return rootIterator;
@@ -108,26 +108,31 @@ namespace ninthTask
             int value = Value.CompareTo(rootIterator.Data);
 
             if (value < 0)
+            {
                 rootIterator.Left = RemoveRecursive(rootIterator.Left, Value);
+                return rootIterator;
+            }
 
             if (value > 0)
-                rootIterator.Right = RemoveRecursive(rootIterator.Right, Value);
-            else
             {
-                if (rootIterator.Left == null)
-                    return rootIterator.Left;
-                else if (rootIterator.Right == null)
-                    return rootIterator.Right;
-
-                rootIterator.Data = MinValue(rootIterator.Right, rootIterator.Data);
-
-                rootIterator.Right = RemoveRecursive(rootIterator.Right, rootIterator.Data);
+                rootIterator.Right = RemoveRecursive(rootIterator.Right, Value);
+                return rootIterator;
             }
+
+            if (rootIterator.Left == null)
+                return rootIterator.Left;
+
+            if (rootIterator.Right == null)
+                return rootIterator.Right;
+
+            rootIterator.Data = MinValue(rootIterator.Right, rootIterator.Data);
+
+            rootIterator.Right = RemoveRecursive(rootIterator.Right, rootIterator.Data);
 
             return rootIterator;
         }
 
-        private T MinValue(BinaryTreeNode tree, T minValue)
+        private static T MinValue(BinaryTreeNode tree, T minValue)
         {
             if (tree.Left != null)
             {
@@ -149,85 +154,73 @@ namespace ninthTask
             return node;
         }
 
-        //public IEnumerator<T> GetEnumerator()
-        //{
-        //    return new BinaryTreeEnumerator(this);
-        //}
+        public IEnumerator<T> GetEnumerator()
+        {
+            return new BinaryTreeEnumerator(this);
+        }
 
-        ///// <summary>
-        ///// The BinaryTreeEnumerator implements the IEnumerator allowing foreach enumeration of the tree
-        ///// </summary>
-        //class BinaryTreeEnumerator : IEnumerator<T>
-        //{
-        //    BinaryTreeNode current;
-        //    BinaryTree<T> theTree;
+        class BinaryTreeEnumerator : IEnumerator<T>
+        {
+            BinaryTreeNode current;
+            BinaryTree<T> theTree;
 
-        //    public BinaryTreeEnumerator(BinaryTree<T> tree)
-        //    {
-        //        theTree = tree;
-        //        current = null;
-        //    }
+            public BinaryTreeEnumerator(BinaryTree<T> tree)
+            {
+                theTree = tree;
+                current = null;
+            }
 
-        //    /// <summary>
-        //    /// The MoveNext function traverses the tree in sorted order.
-        //    /// </summary>
-        //    /// <returns>True if we found a valid entry, False if we have reached the end</returns>
-        //    public bool MoveNext()
-        //    {
-        //        // For the first entry, find the lowest valued node in the tree
-        //        if (current == null)
-        //            current = theTree.FindMostLeft(theTree.Root);
-        //        else
-        //        {
-        //            // Can we go right-left?
-        //            if (current.Right != null)
-        //                current = theTree.FindMostLeft(current.Right);
-        //            else
-        //            {
-        //                // Note the value we have found
-        //                T CurrentValue = current.Data;
+            public bool MoveNext()
+            {
+                if (current == null)
+                    current = theTree.FindMostLeft(theTree.Root);
+                else
+                {
+                    if (current.Right != null)
+                        current = theTree.FindMostLeft(current.Right);
+                    else
+                    {
+                        T CurrentValue = current.Data;
 
-        //                // Go up the tree until we find a value larger than the largest we have
-        //                // already found (or if we reach the root of the tree)
-        //                while (current != null)
-        //                {
-        //                    current = current.Parent;
-        //                    if (current != null)
-        //                    {
-        //                        int Compare = current.Data.CompareTo(CurrentValue);
-        //                        if (Compare < 0) continue;
-        //                    }
-        //                    break;
-        //                }
+                        while (current != null)
+                        {
+                            current = current.Parent;
+                            if (current != null)
+                            {
+                                int Compare = current.Data.CompareTo(CurrentValue);
+                                if (Compare < 0) continue;
+                            }
+                            break;
+                        }
 
-        //            }
-        //        }
-        //        return (current != null);
-        //    }
+                    }
+                }
+                return (current != null);
+            }
 
-        //    public T Current
-        //    {
-        //        get
-        //        {
-        //            if (current == null)
-        //                throw new InvalidOperationException();
-        //            return current.Data;
-        //        }
-        //    }
+            public T Current
+            {
+                get
+                {
+                    if (current == null)
+                        throw new InvalidOperationException();
+                    return current.Data;
+                }
+            }
 
-        //    object IEnumerator.Current
-        //    {
-        //        get
-        //        {
-        //            if (current == null)
-        //                throw new InvalidOperationException();
-        //            return current.Data;
-        //        }
-        //    }
+            object IEnumerator.Current
+            {
+                get
+                {
+                    if (current == null)
+                        throw new InvalidOperationException();
+                    return current.Data;
+                }
+            }
 
-        //    public void Dispose() { }
-        //    public void Reset() { current = null; }
-        //}
+            public void Dispose() { }
+            public void Reset() { current = null; }
+        }
     }
 }
 
