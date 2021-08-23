@@ -39,7 +39,6 @@ namespace ninthTask
                 BinaryTreeNode Interator = Root;
                 AddRecursive(Value, Interator, child);
             }
-
         }
 
         private static void AddRecursive(T Value, BinaryTreeNode rootIterator, BinaryTreeNode child)
