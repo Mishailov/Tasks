@@ -89,7 +89,7 @@ namespace ninthTask
             }
         }
 
-        private static void OrderByValue(IOrderedEnumerable<Student> students)
+        private static void OrderByValue(IEnumerable<Student> students)
         {
             foreach (var value in students)
             {
