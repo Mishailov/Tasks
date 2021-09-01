@@ -5,20 +5,24 @@ using System.Text;
 
 namespace ninthTask
 {
-    class Student
+    class Student : IComparable<Student>
     {
         public string Name { get; private set; }
         public string TestName { get; private set; }
         public DateTime EndTime { get; private set; }
         public int Mark { get; private set; }
 
-        public Student(string name, string testName, DateTime endTime, int mark, BinaryTree<int> marks)
+        public Student(string name, string testName, DateTime endTime, int mark)
         {
             Name = name;
             TestName = testName;
             EndTime = endTime;
             Mark = mark;
-            marks.Add(Mark);
+        }
+
+        public int CompareTo(Student student)
+        {
+            return this.Mark.CompareTo(student.Mark);
         }
     }
 }

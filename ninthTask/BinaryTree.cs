@@ -3,6 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
+namespace System.Linq
+{
+    public sealed class EnumerableWrapper<T> : IEnumerable<T>
+    {
+        readonly IEnumerator<T> Enumerator;
+        public EnumerableWrapper(IEnumerator<T> enumerator) => Enumerator = enumerator;
+        public IEnumerator<T> GetEnumerator() => Enumerator;
+        Collections.IEnumerator Collections.IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+}
+
 namespace ninthTask
 {
     public class BinaryTree<T> where T : IComparable<T>
@@ -29,6 +40,7 @@ namespace ninthTask
             BinaryTreeNode child = new BinaryTreeNode();
 
             child.Data = Value;
+
 
             if (Root == null)
             {
