@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ninthTask
 {
-    class Student : IComparable<Student>
+    public class Student : IComparable<Student>
     {
         public string Name { get; private set; }
         public string TestName { get; private set; }
