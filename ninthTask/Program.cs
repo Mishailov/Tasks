@@ -10,15 +10,13 @@ namespace ninthTask
     {
         static void Main(string[] args)
         {
-            BinaryTree<Student> student = new BinaryTree<Student>();
+            BinaryTree<Student> studentsTree = new BinaryTree<Student>();
 
-            student.Add(new Student("Artem", "c#", DateTime.Now, 7));
-            student.Add(new Student("Denis", "c#", DateTime.Now, 5));
-            student.Add(new Student("Kirill", "c#", DateTime.Now, 6));
-            student.Add(new Student("Vasya", "c#", DateTime.Now, 3));
-            student.Add(new Student("Artem", "c#", DateTime.Now, 7));
-
-            EnumerableWrapper<Student> students = new EnumerableWrapper<Student>(student.GetEnumerator());
+            studentsTree.Add(new Student("Artem", "c#", DateTime.Now, 7));
+            studentsTree.Add(new Student("Denis", "c#", DateTime.Now, 5));
+            studentsTree.Add(new Student("Kirill", "c#", DateTime.Now, 6));
+            studentsTree.Add(new Student("Vasya", "c#", DateTime.Now, 3));
+            studentsTree.Add(new Student("Artem", "c#", DateTime.Now, 7));
 
             Console.WriteLine("Chose one sort conf");
             Console.WriteLine("1 - order by name \n" +
@@ -46,31 +44,31 @@ namespace ninthTask
                 case "1":
                     if (descending.Equals("Y"))
                     {
-                        OrderByValue(students.Take(countLine).OrderByDescending(x => x.Name));
+                        OrderByValue(studentsTree.Take(countLine).OrderByDescending(x => x.Name));
                         break;
                     }
 
-                    OrderByValue(students.Take(countLine).OrderBy(x => x.Name));
+                    OrderByValue(studentsTree.Take(countLine).OrderBy(x => x.Name));
                     break;
 
                 case "2":
                     if (descending.Equals("Y"))
                     {
-                        OrderByValue(students.Take(countLine).OrderByDescending(x => x.TestName));
+                        OrderByValue(studentsTree.Take(countLine).OrderByDescending(x => x.TestName));
                         break;
                     }
 
-                    OrderByValue(students.Take(countLine).OrderBy(x => x.TestName));
+                    OrderByValue(studentsTree.Take(countLine).OrderBy(x => x.TestName));
                     break;
 
                 case "3":
                     if (descending.Equals("Y"))
                     {
-                        OrderByValue(students.Take(countLine).OrderByDescending(x => x.Mark));
+                        OrderByValue(studentsTree.Take(countLine).OrderByDescending(x => x.Mark));
                         break;
                     }
 
-                    OrderByValue(students.Take(countLine).OrderBy(x => x.Mark));
+                    OrderByValue(studentsTree.Take(countLine).OrderBy(x => x.Mark));
                     break;
             }
         }

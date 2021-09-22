@@ -3,20 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
-namespace System.Linq
-{
-    public sealed class EnumerableWrapper<T> : IEnumerable<T>
-    {
-        readonly IEnumerator<T> Enumerator;
-        public EnumerableWrapper(IEnumerator<T> enumerator) => Enumerator = enumerator;
-        public IEnumerator<T> GetEnumerator() => Enumerator;
-        Collections.IEnumerator Collections.IEnumerable.GetEnumerator() => GetEnumerator();
-    }
-}
-
 namespace ninthTask
 {
-    public class BinaryTree<T> where T : IComparable<T>
+    public class BinaryTree<T> : IEnumerable<T>
+        where T : IComparable<T>
     {
         class BinaryTreeNode
         {
@@ -168,6 +158,16 @@ namespace ninthTask
         public IEnumerator<T> GetEnumerator()
         {
             return new BinaryTreeEnumerator(this);
+        }
+
+        IEnumerator<T> IEnumerable<T>.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
 
         class BinaryTreeEnumerator : IEnumerator<T>
