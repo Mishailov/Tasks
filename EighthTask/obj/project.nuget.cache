@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "++wnzCsoE4+teXMiGgtrqbdxEItnFxMQAf7lbfuz+jDo2B4Y0IbukixaDW4BVZq6kcIF1fZSZKpnWlwi7qxUoQ==",
+  "dgSpecHash": "Nbtjun5z5AuZ9A713OMp/x160dIpvjZ1aQHBBUNgghas4q6t9Zk5k9HgYNZKKLJNZO8+ZgV+BpqNzibYjEL//g==",
   "success": true,
-  "projectFilePath": "E:\\C#\\Tasks\\EighthTask\\EighthTask.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Uladzislau_Mikhailau\\source\\old git reps\\Mishailov\\Tasks\\EighthTask\\EighthTask.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Uladzislau_Mikhailau\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\Uladzislau_Mikhailau\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\Uladzislau_Mikhailau\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\Uladzislau_Mikhailau\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.31\\microsoft.netcore.app.host.win-x64.3.1.31.nupkg.sha512"
+  ],
   "logs": []
 }

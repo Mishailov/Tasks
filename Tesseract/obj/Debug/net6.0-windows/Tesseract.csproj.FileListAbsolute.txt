@@ -1,0 +1,40 @@
+C:\Users\Uladzislau_Mikhailau\source\Tesseract\bin\Debug\net6.0-windows\Tesseract.exe
+C:\Users\Uladzislau_Mikhailau\source\Tesseract\bin\Debug\net6.0-windows\Tesseract.deps.json
+C:\Users\Uladzislau_Mikhailau\source\Tesseract\bin\Debug\net6.0-windows\Tesseract.runtimeconfig.json
+C:\Users\Uladzislau_Mikhailau\source\Tesseract\bin\Debug\net6.0-windows\Tesseract.dll
+C:\Users\Uladzislau_Mikhailau\source\Tesseract\bin\Debug\net6.0-windows\Tesseract.pdb
+C:\Users\Uladzislau_Mikhailau\source\Tesseract\obj\Debug\net6.0-windows\Tesseract.csproj.AssemblyReference.cache
+C:\Users\Uladzislau_Mikhailau\source\Tesseract\obj\Debug\net6.0-windows\Tesseract.Main.resources
+C:\Users\Uladzislau_Mikhailau\source\Tesseract\obj\Debug\net6.0-windows\Tesseract.csproj.GenerateResource.cache
+C:\Users\Uladzislau_Mikhailau\source\Tesseract\obj\Debug\net6.0-windows\Tesseract.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Uladzislau_Mikhailau\source\Tesseract\obj\Debug\net6.0-windows\Tesseract.AssemblyInfoInputs.cache
+C:\Users\Uladzislau_Mikhailau\source\Tesseract\obj\Debug\net6.0-windows\Tesseract.AssemblyInfo.cs
+C:\Users\Uladzislau_Mikhailau\source\Tesseract\obj\Debug\net6.0-windows\Tesseract.csproj.CoreCompileInputs.cache
+C:\Users\Uladzislau_Mikhailau\source\Tesseract\obj\Debug\net6.0-windows\Tesseract.dll
+C:\Users\Uladzislau_Mikhailau\source\Tesseract\obj\Debug\net6.0-windows\refint\Tesseract.dll
+C:\Users\Uladzislau_Mikhailau\source\Tesseract\obj\Debug\net6.0-windows\Tesseract.pdb
+C:\Users\Uladzislau_Mikhailau\source\Tesseract\obj\Debug\net6.0-windows\Tesseract.genruntimeconfig.cache
+C:\Users\Uladzislau_Mikhailau\source\Tesseract\obj\Debug\net6.0-windows\ref\Tesseract.dll
+C:\Users\Uladzislau_Mikhailau\source\Tesseract\obj\Debug\net6.0-windows\Tesseract.csproj.CopyComplete
+C:\Users\Uladzislau_Mikhailau\source\Tesseract\bin\Debug\net6.0-windows\WinForms.DataVisualization.Utilities.dll
+C:\Users\Uladzislau_Mikhailau\source\Tesseract\bin\Debug\net6.0-windows\WinForms.DataVisualization.dll
+C:\Users\Uladzislau_Mikhailau\source\old git reps\Mishailov\Tasks\Tesseract\bin\Debug\net6.0-windows\Tesseract.exe
+C:\Users\Uladzislau_Mikhailau\source\old git reps\Mishailov\Tasks\Tesseract\bin\Debug\net6.0-windows\Tesseract.deps.json
+C:\Users\Uladzislau_Mikhailau\source\old git reps\Mishailov\Tasks\Tesseract\bin\Debug\net6.0-windows\Tesseract.runtimeconfig.json
+C:\Users\Uladzislau_Mikhailau\source\old git reps\Mishailov\Tasks\Tesseract\bin\Debug\net6.0-windows\Tesseract.dll
+C:\Users\Uladzislau_Mikhailau\source\old git reps\Mishailov\Tasks\Tesseract\bin\Debug\net6.0-windows\Tesseract.pdb
+C:\Users\Uladzislau_Mikhailau\source\old git reps\Mishailov\Tasks\Tesseract\bin\Debug\net6.0-windows\WinForms.DataVisualization.Utilities.dll
+C:\Users\Uladzislau_Mikhailau\source\old git reps\Mishailov\Tasks\Tesseract\bin\Debug\net6.0-windows\WinForms.DataVisualization.dll
+C:\Users\Uladzislau_Mikhailau\source\old git reps\Mishailov\Tasks\Tesseract\obj\Debug\net6.0-windows\Tesseract.csproj.AssemblyReference.cache
+C:\Users\Uladzislau_Mikhailau\source\old git reps\Mishailov\Tasks\Tesseract\obj\Debug\net6.0-windows\Tesseract.Main.resources
+C:\Users\Uladzislau_Mikhailau\source\old git reps\Mishailov\Tasks\Tesseract\obj\Debug\net6.0-windows\Tesseract.csproj.GenerateResource.cache
+C:\Users\Uladzislau_Mikhailau\source\old git reps\Mishailov\Tasks\Tesseract\obj\Debug\net6.0-windows\Tesseract.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Uladzislau_Mikhailau\source\old git reps\Mishailov\Tasks\Tesseract\obj\Debug\net6.0-windows\Tesseract.AssemblyInfoInputs.cache
+C:\Users\Uladzislau_Mikhailau\source\old git reps\Mishailov\Tasks\Tesseract\obj\Debug\net6.0-windows\Tesseract.AssemblyInfo.cs
+C:\Users\Uladzislau_Mikhailau\source\old git reps\Mishailov\Tasks\Tesseract\obj\Debug\net6.0-windows\Tesseract.csproj.CoreCompileInputs.cache
+C:\Users\Uladzislau_Mikhailau\source\old git reps\Mishailov\Tasks\Tesseract\obj\Debug\net6.0-windows\Tesseract.csproj.CopyComplete
+C:\Users\Uladzislau_Mikhailau\source\old git reps\Mishailov\Tasks\Tesseract\obj\Debug\net6.0-windows\Tesseract.dll
+C:\Users\Uladzislau_Mikhailau\source\old git reps\Mishailov\Tasks\Tesseract\obj\Debug\net6.0-windows\refint\Tesseract.dll
+C:\Users\Uladzislau_Mikhailau\source\old git reps\Mishailov\Tasks\Tesseract\obj\Debug\net6.0-windows\Tesseract.pdb
+C:\Users\Uladzislau_Mikhailau\source\old git reps\Mishailov\Tasks\Tesseract\obj\Debug\net6.0-windows\Tesseract.genruntimeconfig.cache
+C:\Users\Uladzislau_Mikhailau\source\old git reps\Mishailov\Tasks\Tesseract\obj\Debug\net6.0-windows\ref\Tesseract.dll

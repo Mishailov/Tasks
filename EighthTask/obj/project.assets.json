@@ -8,19 +8,24 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\veram\\.nuget\\packages\\": {}
+    "C:\\Users\\Uladzislau_Mikhailau\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\C#\\Tasks\\EighthTask\\EighthTask.csproj",
+      "projectUniqueName": "C:\\Users\\Uladzislau_Mikhailau\\source\\old git reps\\Mishailov\\Tasks\\EighthTask\\EighthTask.csproj",
       "projectName": "EighthTask",
-      "projectPath": "E:\\C#\\Tasks\\EighthTask\\EighthTask.csproj",
-      "packagesPath": "C:\\Users\\veram\\.nuget\\packages\\",
-      "outputPath": "E:\\C#\\Tasks\\EighthTask\\obj\\",
+      "projectPath": "C:\\Users\\Uladzislau_Mikhailau\\source\\old git reps\\Mishailov\\Tasks\\EighthTask\\EighthTask.csproj",
+      "packagesPath": "C:\\Users\\Uladzislau_Mikhailau\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Uladzislau_Mikhailau\\source\\old git reps\\Mishailov\\Tasks\\EighthTask\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\veram\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Uladzislau_Mikhailau\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -28,6 +33,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -51,16 +57,35 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.1.10, 3.1.10]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.1.31, 3.1.31]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[3.1.0, 3.1.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[3.1.0, 3.1.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

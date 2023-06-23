@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "tvOzuZFBUB4Vo1Bv44DhCGWzeBhINhJ0x5fIxGPeWlWVxQAOlhjWTsjJUi9FBGEFcS7c4cJ5owqp1Tu8xhFMww==",
+  "dgSpecHash": "8sb7qKBZ05HfjvkIUpUw0nTgwadEMHP4Dyelu5GXXJ905OxEfDRRVRnrSMckUzVk1Me+c5iDepj3CkHQx3JEXw==",
   "success": true,
-  "projectFilePath": "E:\\C#\\Tasks\\FifthTask\\FifthTask.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Uladzislau_Mikhailau\\source\\old git reps\\Mishailov\\Tasks\\FifthTask\\FifthTask.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Uladzislau_Mikhailau\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\Uladzislau_Mikhailau\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\Uladzislau_Mikhailau\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\Uladzislau_Mikhailau\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.31\\microsoft.netcore.app.host.win-x64.3.1.31.nupkg.sha512"
+  ],
   "logs": []
 }
