@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             pictureBox1 = new PictureBox();
-            hScrollBar1 = new HScrollBar();
-            label1 = new Label();
-            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -48,55 +45,22 @@
             pictureBox1.MouseMove += pictureBox1_MouseMove;
             pictureBox1.MouseUp += pictureBox1_MouseUp;
             // 
-            // hScrollBar1
-            // 
-            hScrollBar1.Location = new Point(172, 595);
-            hScrollBar1.Maximum = 90;
-            hScrollBar1.Name = "hScrollBar1";
-            hScrollBar1.Size = new Size(349, 39);
-            hScrollBar1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(722, 580);
-            label1.Name = "label1";
-            label1.Size = new Size(59, 25);
-            label1.TabIndex = 2;
-            label1.Text = "label1";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(858, 580);
-            label2.Name = "label2";
-            label2.Size = new Size(59, 25);
-            label2.TabIndex = 3;
-            label2.Text = "label2";
-            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
-            ClientSize = new Size(1000, 800);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(hScrollBar1);
+            ClientSize = new Size(1000, 562);
             Controls.Add(pictureBox1);
             Name = "Main";
             Text = "Main";
             Load += Main_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private PictureBox pictureBox1;
-        private HScrollBar hScrollBar1;
-        private Label label1;
-        private Label label2;
     }
 }
